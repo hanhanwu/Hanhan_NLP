@@ -49,7 +49,15 @@ def get_whole_chunk(s, start_target_pos_lst, end_target_pos_lst):
   end_idx_lst = [ei for ei in reserved(end_idx_lst)]
   
   post_idx = end_idx_lst[0]
+  pre_idx = -1
+  first = 0
+  first_idx = -1
   while j < len(start_target_pos_lst):
-    idx = get_first_pos_index(start_target_pos_lst[j], pos_lst)
-  
-  # TO + VB + ..... '.' 
+    idx = get_first_pos_index(start_target_pos_lst[j], pos_lst, pre_idx, post_idx)
+    if idx == -1: return []
+    if first == 0:
+      first_idx = idx
+    pre_idx = idx
+    i += 1
+    
+  return pos_lst[first_idx:end_idx_lst[-1]]
