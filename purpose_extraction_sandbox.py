@@ -1,3 +1,15 @@
+# When the patterns contains these specific words and other pos, change these words' poses to the words themselves
+words2pos = ['your own specific words list']    # words here will differ based on diff contect
+
+for i in range(len(pos_tagged_tokens)):
+  for j in range(len(pos_tagged_tokens[i])):
+    if pos_tagged_tokens[i][j][0] in words2pos:
+      pos_tagged_tokens[i][j] = list(pos_tagged_tokens[i][j])
+      pos_tagged_tokens[i][j][1] = pos_tagged_tokens[i][j][0]
+      pos_tagged_tokens[i][j] = tuple(pos_tagged_tokens[i][j])
+
+print pos_tagged_tokens
+
 
 # token pos are arranged in a specific order, every pos appears in this case once
 def get_pos_index(general_pos, pos_lst, pre_idx, post_idx, specified_position=0):
