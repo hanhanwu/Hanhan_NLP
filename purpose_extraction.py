@@ -1,10 +1,5 @@
 # Product - Extract Interactions
 import re
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('maxent_treebank_pos_tagger')
-nltk.download('averaged_perceptron_tagger')
 
 innocent_starts = ('ms.', 'mr.', 'mrs.', 'miss.', 'i.e')
 Specific_NN = ["LOS", "TRXN", "ETO", "FLFA", "Vancity", "TDS", "CIBC", "LOC", "FL", "FA"]    # NNs that only used in this scenario
@@ -135,70 +130,79 @@ for tst_s in all_purpose:
   for ts in pos_tagged_tokens:
     target_pos = ['MD', 'TO', 'VB', 'NN']
     interactions = extract_simple_sequences(ts, target_pos)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # for + NN
   for ts in pos_tagged_tokens:
     target_pos = ['for', 'NN']
     interactions = extract_simple_sequences(ts, target_pos)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # member/members + VB .... NN ..'.'
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['member', 'VB']
     end_target_pos_lst = ['NN', '.']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # member/members + VB .... NN ..':'
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['member', 'VB']
     end_target_pos_lst = ['NN', ':']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # mbr + VB .... NN ../'.'
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['mbr', 'VB']
     end_target_pos_lst = ['NN', '.']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # mbr + VB .... NN ..':'
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['mbr', 'VB']
     end_target_pos_lst = ['NN', ':']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # TO + VB + ..... '.' 
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['TO', 'VB']
     end_target_pos_lst = ['.']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # TO + VB + ..... ':' 
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['TO', 'VB']
     end_target_pos_lst = [':']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # want/wants to + VB .... '.'
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['want', 'TO', 'VB']
     end_target_pos_lst = ['.']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
-
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
 
   # want/wants to + VB ..... ':'
   for ts in pos_tagged_tokens:
     start_target_pos_lst = ['want', 'TO', 'VB']
     end_target_pos_lst = [':']
     interactions = get_whole_chunk(ts, start_target_pos_lst, end_target_pos_lst)
-    interaction_collections.append(interactions)
+    if len(interactions) > 0:
+      interaction_collections.append(interactions)
     
   if len(sentences) > 0: print sentences
   for interaction in interaction_collections:
