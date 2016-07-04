@@ -1,3 +1,39 @@
+# Using Spark Python Notebook here
+
+# Vancouver - 190
+json_data = sqlContext.read.format('json').load("[HDFS path]")
+json_lst = json_data.collect()
+vancouver_purpose = [p for p in json_lst[0]]
+
+# Burnaby - 64
+json_data = sqlContext.read.format('json').load("[HDFS path]")
+json_lst = json_data.collect()
+burnaby_purpose = [p for p in json_lst[0]]
+
+# Surrey - 77
+json_data = sqlContext.read.format('json').load("[HDFS path]")
+json_lst = json_data.collect()
+surrey_purpose = [p for p in json_lst[0]]
+
+
+
+all_purpose = []
+all_purpose.extend(vancouver_purpose)
+all_purpose.extend(burnaby_purpose)
+all_purpose.extend(surrey_purpose)
+
+print len(all_purpose)
+
+
+
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('maxent_treebank_pos_tagger')
+nltk.download('averaged_perceptron_tagger')
+
+
+
 # extract continious NN
 def get_NN_combinations(interaction):
   all_NN_combinations = []
@@ -17,8 +53,9 @@ def get_NN_combinations(interaction):
   return all_NN_combinations
 
 
+
 # extract VBNN combinations
-def get_VBNN_combination(interaction):
+def get_VBNN_combinations(interaction):
   all_VBNN_combinations = []
   for i in range(len(interaction)):
     if interaction[i][1].startswith('VB'):
@@ -36,10 +73,65 @@ def get_VBNN_combination(interaction):
 
 
 
+# extract VB...NN combinations
+def get_VB2NN_combinations(interaction):
+  all_VB2NN_combinations = []
+  for i in range(len(interaction)):
+    if interaction[i][1].startswith('VB'):
+      j = i + 2    # here because I have VBNN method :)
+      tmp_VB2NN_combinations = []
+      while j < len(interaction):
+        if interaction[j][1].startswith('NN'):
+          for k in range(i, j+1):
+            tmp_VB2NN_combinations.append(interaction[k][0])
+          break
+        j += 1
+      if len(tmp_VB2NN_combinations) > 0: all_VB2NN_combinations.append(' '.join(tmp_VB2NN_combinations))
+        
+  return all_VB2NN_combinations
 
 
 
-# Extract Interactions
+# extract strict NN entities
+def get_restrict_NN_entities(interaction):
+  all_NN_entities = set()
+  for i in range(len(interaction)):
+    if interaction[i][1] == 'NN':
+      all_NN_entities.add(interaction[i][0])
+  return list(all_NN_entities)
+
+
+
+# extract strict VB entities
+def get_restrict_VB_entities(interaction):
+  all_VB_entities = set()
+  for i in range(len(interaction)):
+    if interaction[i][1] == 'VB':
+      all_VB_entities.add(interaction[i][0])
+  return list(all_VB_entities)
+
+
+# extract NN entities, startswith NN
+def get_NN_entities(interaction):
+  all_NN_entities = set()
+  for i in range(len(interaction)):
+    if interaction[i][1].startswith('NN'):
+      all_NN_entities.add(interaction[i][0])
+  return list(all_NN_entities)
+
+
+
+
+NN_combinations_dict = {}
+VBNN_combinations_dict = {}
+VB2NN_combinations_dict = {}
+NN_entities_dict = {}
+VB_entities_dict = {}
+multiple_NN_entities_dict = {}
+
+
+
+# Product - Extract Interactions
 import re
 
 innocent_starts = ('ms.', 'mr.', 'mrs.', 'miss.', 'i.e')
@@ -248,9 +340,41 @@ for tst_s in all_purpose:
   if len(sentences) > 0: print sentences
   for interaction in interaction_collections:
     print interaction
+    
     NN_combinations = get_NN_combinations(interaction)
     if len(NN_combinations) > 0:
       for NN_combination in NN_combinations:
         NN_combinations_dict.setdefault(NN_combination, 0)
         NN_combinations_dict[NN_combination] += 1
+        
+    VBNN_combinations = get_VBNN_combinations(interaction)
+    if len(VBNN_combinations) > 0:
+      for VBNN_combination in VBNN_combinations:
+        VBNN_combinations_dict.setdefault(VBNN_combination, 0)
+        VBNN_combinations_dict[VBNN_combination] += 1
+        
+    VB2NN_combinations = get_VB2NN_combinations(interaction)
+    if len(VB2NN_combinations) > 0:
+      for VB2NN_combination in VB2NN_combinations:
+        VB2NN_combinations_dict.setdefault(VB2NN_combination, 0)
+        VB2NN_combinations_dict[VB2NN_combination] += 1
+        
+    NN_entities = get_restrict_NN_entities(interaction)
+    if len(NN_entities) > 0:
+      for NN_entity in NN_entities:
+        NN_entities_dict.setdefault(NN_entity, 0)
+        NN_entities_dict[NN_entity] += 1
+        
+    VB_entities = get_restrict_VB_entities(interaction)
+    if len(VB_entities) > 0:
+      for VB_entity in VB_entities:
+        VB_entities_dict.setdefault(VB_entity, 0)
+        VB_entities_dict[VB_entity] += 1
+        
+    multiple_NN_entities = get_NN_entities(interaction)
+    if len(multiple_NN_entities) > 0:
+      for multiple_NN_entity in multiple_NN_entities:
+        multiple_NN_entities_dict.setdefault(multiple_NN_entity, 0)
+        multiple_NN_entities_dict[multiple_NN_entity] += 1
+    
   print
