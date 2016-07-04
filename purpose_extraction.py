@@ -1,4 +1,45 @@
-# Product - Extract Interactions
+# extract continious NN
+def get_NN_combinations(interaction):
+  all_NN_combinations = []
+  for i in range(len(interaction)):
+    if interaction[i][1].startswith('NN'):
+      j = i + 1
+      tmp_NN_combinations = []
+      while j < len(interaction):
+        if interaction[j][1].startswith('NN'): 
+          if j == i+1: 
+            tmp_NN_combinations.append(interaction[i][0])
+          tmp_NN_combinations.append(interaction[j][0])
+        else: break
+        j += 1
+      if len(tmp_NN_combinations) > 0: all_NN_combinations.append(' '.join(tmp_NN_combinations))
+        
+  return all_NN_combinations
+
+
+# extract VBNN combinations
+def get_VBNN_combination(interaction):
+  all_VBNN_combinations = []
+  for i in range(len(interaction)):
+    if interaction[i][1].startswith('VB'):
+      j = i + 1
+      tmp_VBNN_combinations = []
+      while j < len(interaction):
+        if interaction[j][1].startswith('NN'):
+          tmp_VBNN_combinations.append(interaction[i][0])
+          tmp_VBNN_combinations.append(interaction[j][0])
+        else: break
+        j += 1
+      if len(tmp_VBNN_combinations) > 0: all_VBNN_combinations.append(' '.join(tmp_VBNN_combinations))
+        
+  return all_VBNN_combinations
+
+
+
+
+
+
+# Extract Interactions
 import re
 
 innocent_starts = ('ms.', 'mr.', 'mrs.', 'miss.', 'i.e')
