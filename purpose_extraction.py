@@ -2,7 +2,7 @@
 import re
 
 innocent_starts = ('ms.', 'mr.', 'mrs.', 'miss.', 'i.e')
-Specific_NN = ["LOS", "TRXN", "ETO", "FLFA", "Vancity", "TDS", "CIBC", "LOC", "FL", "FA"]    # NNs that only used in this scenario
+Specific_NN = ["LOS", "TRXN", "ETO", "FLFA", "Vancity", "TDS", "CIBC", "LOC", "FL", "FA", "HELOC"]    # NNs that only used in this scenario
 words2pos = ['want', 'wants', 'member', 'mbr', 'members', 'for']
 
 
@@ -207,4 +207,9 @@ for tst_s in all_purpose:
   if len(sentences) > 0: print sentences
   for interaction in interaction_collections:
     print interaction
+    NN_combinations = get_NN_combinations(interaction)
+    if len(NN_combinations) > 0:
+      for NN_combination in NN_combinations:
+        NN_combinations_dict.setdefault(NN_combination, 0)
+        NN_combinations_dict[NN_combination] += 1
   print
