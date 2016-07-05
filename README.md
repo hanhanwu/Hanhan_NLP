@@ -13,3 +13,4 @@ NLP research and implementation
 
 
 * <b>Text - Independent Speaker Identification using Hidden Markov Models</b>
+* <b>Hidden Markov Models in Text Recognition</b>
