@@ -1,16 +1,16 @@
 # Using Spark Python Notebook here
 
-# Vancouver - 190
+# Vancouver 
 json_data = sqlContext.read.format('json').load("[HDFS path]")
 json_lst = json_data.collect()
 vancouver_purpose = [p for p in json_lst[0]]
 
-# Burnaby - 64
+# Burnaby 
 json_data = sqlContext.read.format('json').load("[HDFS path]")
 json_lst = json_data.collect()
 burnaby_purpose = [p for p in json_lst[0]]
 
-# Surrey - 77
+# Surrey 
 json_data = sqlContext.read.format('json').load("[HDFS path]")
 json_lst = json_data.collect()
 surrey_purpose = [p for p in json_lst[0]]
@@ -31,7 +31,6 @@ nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('maxent_treebank_pos_tagger')
 nltk.download('averaged_perceptron_tagger')
-
 
 
 # extract continious NN
@@ -92,6 +91,25 @@ def get_VB2NN_combinations(interaction):
 
 
 
+# extract for.... NN combinations
+def get_FOR2NN_combinations(interaction):
+  all_FOR2NN_combinations = []
+  for i in range(len(interaction)):
+    if interaction[i][1].startswith('for'):
+      j = i + 1    
+      tmp_FOR2NN_combinations = []
+      while j < len(interaction):
+        if interaction[j][1].startswith('NN'):
+          for k in range(i, j+1):
+            tmp_FOR2NN_combinations.append(interaction[k][0])
+          break
+        j += 1
+      if len(tmp_FOR2NN_combinations) > 0: all_FOR2NN_combinations.append(' '.join(tmp_FOR2NN_combinations))
+        
+  return all_FOR2NN_combinations
+
+
+
 # extract strict NN entities
 def get_restrict_NN_entities(interaction):
   all_NN_entities = set()
@@ -118,16 +136,17 @@ def get_NN_entities(interaction):
     if interaction[i][1].startswith('NN'):
       all_NN_entities.add(interaction[i][0])
   return list(all_NN_entities)
-
-
-
-
+  
+  
+  
+# All interactions, entities dictionaries
 NN_combinations_dict = {}
 VBNN_combinations_dict = {}
 VB2NN_combinations_dict = {}
 NN_entities_dict = {}
 VB_entities_dict = {}
 multiple_NN_entities_dict = {}
+FOR2NN_combinations_dict = {}
 
 
 
@@ -359,6 +378,12 @@ for tst_s in all_purpose:
         VB2NN_combinations_dict.setdefault(VB2NN_combination, 0)
         VB2NN_combinations_dict[VB2NN_combination] += 1
         
+    FOR2NN_combinations = get_FOR2NN_combinations(interaction)
+    if len(FOR2NN_combinations) > 0:
+      for FOR2NN_combination in FOR2NN_combinations:
+        FOR2NN_combinations_dict.setdefault(FOR2NN_combination, 0)
+        FOR2NN_combinations_dict[FOR2NN_combination] += 1
+        
     NN_entities = get_restrict_NN_entities(interaction)
     if len(NN_entities) > 0:
       for NN_entity in NN_entities:
@@ -378,3 +403,39 @@ for tst_s in all_purpose:
         multiple_NN_entities_dict[multiple_NN_entity] += 1
     
   print
+
+
+
+# sort all dictionaries
+import operator
+
+sorted_NN_combinations = sorted(NN_combinations_dict.items(), key=operator.itemgetter(1), reverse=True)
+sorted_VBNN_combinations = sorted(VBNN_combinations_dict.items(), key=operator.itemgetter(1), reverse=True)
+sorted_VB2NN_combinations = sorted(VB2NN_combinations_dict.items(), key=operator.itemgetter(1), reverse=True)
+sorted_FOR2NN_combinations = sorted(FOR2NN_combinations_dict.items(), key=operator.itemgetter(1), reverse=True)
+sorted_NN_entities = sorted(NN_entities_dict.items(), key=operator.itemgetter(1), reverse=True)
+sorted_VB_entities = sorted(VB_entities_dict.items(), key=operator.itemgetter(1), reverse=True)
+sorted_multiple_NN_entities = sorted(multiple_NN_entities_dict.items(), key=operator.itemgetter(1), reverse=True)
+
+
+
+for NN_combination_count in sorted_NN_combinations:
+  print NN_combination_count
+  
+for VBNN_combination_count in sorted_VBNN_combinations:
+  print VBNN_combination_count
+  
+for VB2NN_combination_count in sorted_VB2NN_combinations:
+  print VB2NN_combination_count
+  
+for FOR2NN_combination_count in sorted_FOR2NN_combinations:
+  print FOR2NN_combination_count
+  
+for NN_entity_count in sorted_NN_entities:
+  print NN_entity_count
+  
+for VB_entity_count in sorted_VB_entities:
+  print VB_entity_count
+  
+for multiple_NN_entity_count in sorted_multiple_NN_entities:
+  print multiple_NN_entity_count
