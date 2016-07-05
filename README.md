@@ -14,3 +14,9 @@ NLP research and implementation
 
 * <b>Text - Independent Speaker Identification using Hidden Markov Models</b>
 * <b>Hidden Markov Models in Text Recognition</b>
+* Python HMM
+ * http://scikit-learn.sourceforge.net/stable/modules/hmm.html
+ * https://github.com/hanhanwu/hmmlearn/blob/master/examples/plot_hmm_stock_analysis.py
+* R HMM
+ * https://cran.r-project.org/web/packages/HMM/HMM.pdf
+
