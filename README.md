@@ -10,3 +10,6 @@ NLP research and implementation
 * Inspiration
  * Maybe I can try HMM in my semantic layer, see what kind of key components will lead to what kind of result
  * It's a good idea to record writing behaviour and do analysis, plus time/duration may be better
+
+
+* <b>Text - Independent Speaker Identification using Hidden Markov Models</b>
