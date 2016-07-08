@@ -1,7 +1,8 @@
+# nearest 'for'
 def for_NN_investment(ts, s):
   key_start = 'investment'
   key_start_idx = -1
-  followers = ['opportuni', 'purpose']
+  followers = ['opportuni', 'purpose', 'propert']
   
   if key_start in s:
     for i in range(len(ts)):
