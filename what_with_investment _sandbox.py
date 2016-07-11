@@ -71,3 +71,32 @@ def for_investment_end(ts, s):
         pre_idx -= 1
       
   return None
+
+
+
+# investment IN .. NN
+def investment_IN_NN(ts, s):
+  key_start = 'investment'
+  key_start_idx = -1
+  
+  if key_start in s:
+    for i in range(len(ts)):
+      if ts[i][0].startswith(key_start):
+        key_start_idx = i
+        break
+  else: return None
+  
+  after_idx = key_start_idx + 1
+  if ts[after_idx][1].startswith('IN'):
+    first_NN = 0
+    end_combination_idx = -1
+    while after_idx < len(ts) and ts[after_idx][1].startswith('.') == False:
+      if ts[after_idx][1].startswith('NN') and first_NN == 0:
+        first_NN += 1
+      elif ts[after_idx][1].startswith('NN') == False and first_NN == 1:
+        end_combination_idx = after_idx
+        return ts[key_start_idx : end_combination_idx]
+        
+      after_idx += 1
+    
+  return None
