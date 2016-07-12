@@ -1,3 +1,6 @@
+from nltk.stem.porter import *
+stemmer = PorterStemmer()
+
 def JJ_NN_investment(ts, s):
   key_start = 'investment'
   key_start_idx = -1
@@ -11,9 +14,9 @@ def JJ_NN_investment(ts, s):
   if key_start_idx != -1:
     if key_start_idx >= 2 and ts[key_start_idx-1][1].startswith('NN'):
       if ts[key_start_idx-1][0] not in filtered_NN:
-        if ts[key_start_idx-2][1].startswith('JJ'):
-          return ts[key_start_idx-2 : key_start_idx]
-        else: return ts[key_start_idx-1 : key_start_idx]
+        if ts[key_start_idx-2][1].startswith('JJ'):  
+          return ' '.join([stemmer.stem(t[0]) for t in ts[key_start_idx-2 : key_start_idx]])
+        else: return ' '.join([stemmer.stem(t[0]) for t in ts[key_start_idx-1 : key_start_idx]])
       
       
 
@@ -39,7 +42,7 @@ def investment_IN_NN(ts, s):
           first_NN += 1
         elif ts[after_idx][1].startswith('NN') == False and first_NN == 1:
           end_combination_idx = after_idx
-          return ts[start_combination_idx+1 : end_combination_idx]
+          return ' '.join([stemmer.stem(t[0]) for t in ts[start_combination_idx+1 : end_combination_idx]])
 
         after_idx += 1
     
