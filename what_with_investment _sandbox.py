@@ -78,3 +78,31 @@ def invest_IN_NN(ts, s):
     
   return None
     
+  
+  
+def NN_in_which_invest(ts, s):
+  key_start = 'invest'
+  key_start_idx = -1
+  
+  if key_start in s:
+    for i in range(len(ts)):
+      if ts[i][0] == key_start:
+        key_start_idx = i
+  else: return None
+  
+  if key_start_idx != -1:
+    pre_idx = key_start_idx - 1
+    while pre_idx >= 0:
+      if ts[pre_idx][0].lower() == 'which' and ts[pre_idx-1][0].lower() == 'in':
+        combination_end_idx = pre_idx - 1
+        k = pre_idx - 2
+        has_NN = 0
+        while k >= 0:
+          if ts[k][1].startswith('NN') == False and has_NN == 0: return None
+          elif ts[k][1].startswith('NN') == True and has_NN == 0: has_NN += 1
+          elif (ts[k][1].startswith('NN') == False and ts[k][1].startswith('JJ') == False) and has_NN == 1:
+            return ts[k+1:combination_end_idx]
+          k -= 1
+      pre_idx -= 1
+      
+  return None
