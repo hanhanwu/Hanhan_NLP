@@ -101,7 +101,7 @@ def NN_in_which_invest(ts, s):
           if ts[k][1].startswith('NN') == False and has_NN == 0: return None
           elif ts[k][1].startswith('NN') == True and has_NN == 0: has_NN += 1
           elif (ts[k][1].startswith('NN') == False and ts[k][1].startswith('JJ') == False) and has_NN == 1:
-            return ts[k+1:combination_end_idx]
+            return ' '.join([stemmer.stem(t[0]) for t in ts[k+1:combination_end_idx]])
           k -= 1
       pre_idx -= 1
       
