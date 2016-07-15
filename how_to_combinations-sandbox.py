@@ -1,12 +1,14 @@
 # [VB(closest VB)] [(JJ..) (NN..)] to VB combinations
+## This one is does not create too much meaningful results~
 
 def get_howto_combinations(ts):
-  key_start = 'to'
+  key_start = 'TO'
   key_start_idx = -1
   
   for i in range(len(ts)):
-    if ts[i][0] == key_start:
+    if ts[i][1] == key_start:
       key_start_idx = i
+      break
       
   # key_start_idx must > 0 since this function only runs when it's a TO...VB combination
   pre_idx = key_start_idx - 1
@@ -17,8 +19,10 @@ def get_howto_combinations(ts):
     if first_NN == 0 and ts[pre_idx][1].startswith('NN'):
       end_idx = pre_idx + 1
       first_NN += 1
+    elif first_NN == 0 and ts[pre_idx][1].startswith('NN') == False:
+      return None
     elif first_NN == 1 and ts[pre_idx][1].startswith('NN') == False and ts[pre_idx][1].startswith('JJ') == False:
-      start_idx = pre_idx - 1
+      start_idx = pre_idx + 1
       break
     pre_idx -= 1
     
@@ -29,4 +33,3 @@ def get_howto_combinations(ts):
       return [ts[k], ts[start_idx:end_idx]]
     k -= 1
   return ts[start_idx:end_idx]
-      
