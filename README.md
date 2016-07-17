@@ -20,3 +20,5 @@ NLP research and implementation
 * R HMM
  * https://cran.r-project.org/web/packages/HMM/HMM.pdf
 
+* <b> Author Recognition</b>
+* Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
