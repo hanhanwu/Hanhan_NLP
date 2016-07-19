@@ -22,3 +22,14 @@ NLP research and implementation
 
 * <b> Author Recognition</b>
 * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
+
+
+
+<b>Advanced NLP Tools</b>
+
+-- UW NLP TOOLS
+* Reverb  (works well on raw text)
+ * About Reverb: https://github.com/hanhanwu/reverb
+ * My code using reverb for extraction: https://github.com/hanhanwu/Hanhan_NLP/blob/master/reverb_extraction.py
+ * Sample data for my code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/reverb_sample_data.txt
+ * How to run my code: 1) Download the latest reverb .jar file 2) open your terminal, cd to the folder where you have your text data input and reverb .jar file 3) run this command in your terminal `java -Xmx512m -jar reverb-latest.jar [input file name] > [output file name]` 4) The run my Python code, `r_pre` is the file path prefix for data input, `f_path` is the output data path full name
