@@ -56,8 +56,8 @@ def LDA_feature_extraction(text_lst, n_samples, n_features, n_topics, n_top_word
 
 
 def main():
-    r_pre = "/Users/hanhanwu/Desktop/all_purpose"
-    f_path = "/Users/hanhanwu/Desktop/all_purpose_export.txt"
+    r_pre = "[your file path]/all_purpose"
+    f_path = "[your file path]/all_purpose_export.txt"
     
     p1 = r_pre + "\.csv\t\d+\t(.*?)(\t\d+){6}"
     p2 = "(.*?)O\s*\t(.*?)"
