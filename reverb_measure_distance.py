@@ -8,6 +8,31 @@ import re
 import operator
 
 
+def print_matched_groups(extracted_combo_lst):
+    dst_dct = {}
+    
+    for itm in extracted_combo_lst:
+        dst_dct.setdefault(itm, [])
+        if len(extracted_combo_lst) == 1: break
+        
+        match_dct = {}
+        for i in range(len(extracted_combo_lst)):
+            if extracted_combo_lst[i] == itm: continue
+            dst = Levenshtein.ratio(itm, extracted_combo_lst[i])
+            match_dct[extracted_combo_lst[i]] = dst
+            
+        sorted_match_lst = sorted(match_dct.items(), key = operator.itemgetter(1), reverse = True)
+        top_n = 2
+        dst_dct[itm] = [e[0] for e in sorted_match_lst[0:top_n]]
+        extracted_combo_lst.remove(itm)
+        for e in dst_dct[itm]:
+            extracted_combo_lst.remove(e)
+            
+    for k, v in dst_dct.items():
+        print k, v
+        print
+
+
 def main():
     r_pre = "[your file path]/all_purpose"
     f_path = "[your file path]/all_purpose_export.txt"
@@ -32,20 +57,13 @@ def main():
         extracted_stemmed_combo_set.add(m2.lower())
         
     extracted_combo_lst = list(extracted_combo_set)
+    extracted_stemmed_combo_lst = list(extracted_stemmed_combo_set)
     
-    ## test only
-    target = extracted_combo_lst[-1]
-    print 'target: ', target
+    # it seems that, using un-stemmed data makes a little more sense here...
+    print_matched_groups(extracted_combo_lst)
+    print "*********************"
     print
-    match_dct = {}
-    
-    for i in range(len(extracted_combo_lst)-1):
-        dst = Levenshtein.ratio(target, extracted_combo_lst[i])
-        match_dct[extracted_combo_lst[i]] = dst
-        
-    sorted_match_lst = sorted(match_dct.items(), key = operator.itemgetter(1), reverse = True)
-    for itm in sorted_match_lst:
-        print itm
-    
+    print_matched_groups(extracted_stemmed_combo_lst)
+
 if __name__ == "__main__":
     main()
