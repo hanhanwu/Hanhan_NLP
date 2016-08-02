@@ -1,0 +1,105 @@
+I put all the sweet memories in the sky so that they will be with me at any time anywhere. I am telling the sky that Destiny said he is a significant one in my life. Then the sky keeps quiet and all those memories start to slowly drop on the ground one by one, slower than the rain but faster than the I can capture each of them and embed them in my heart. The earth swallowed all those tiny memories in front of me and he said, these are as sweet as candy. I smiled bitterly and saying, “you have just ate my memories about him, could you return them back to me?” The Earth said, “could you return those you have already swallowed?” I am crying to the sky and asking what can I do, the sky keeps quiet and keep dropping all of my memories one by one, sounds like it is saying, “don’t feel sad my child, tomorrow you still need to drive the car and need to be focused….”. I keep asking, “is he going to to return back?”…. But there is only silence.
+0.835: (those memories; start to slowly drop on; the ground one)[attrib=Destiny that said]
+0.83: ("you; have just ate; my memories)
+0.783: (they; will be with; me)
+0.728: (those memories; start to slowly drop by; one)[attrib=Destiny that said]
+0.718: (they; will be at; any time)
+0.718: (a significant one; start to slowly drop on; the ground one)[attrib=Destiny that said]
+0.705: (I; put; the sweet memories)
+0.697: (a significant one; embed them in; my heart)[attrib=Destiny that said]
+0.697: (those memories; embed them in; my heart)[attrib=Destiny that said]
+0.679: (you; could return them back to; me)
+0.619: (he; is; a significant one)
+0.619: (a significant one; embed; them)[attrib=Destiny that said]
+0.619: (those memories; embed; them)[attrib=Destiny that said]
+0.589: (you; could return; them)
+0.579: (he; to to return back; …)
+0.574: (a significant one; start to slowly drop by; one)[attrib=Destiny that said]
+0.561: (I; am crying to; the sky)
+0.557: (them; be embed in; my heart)[attrib=Destiny that said]
+0.49: ("do; n't feel sad; my child)
+0.459: (them; could be return back to; me)
+0.37: (I; am are as sweet as; candy)
+0.359: (I; am telling The earth; the sky that Destiny said he is a significant one in my life . Then the sky keeps quiet and all those memories start to slowly drop on the ground one by one , slower than the rain but faster than the I can capture each of them and embed them in my heart)
+0.308: (he; "is going to to return back; …)
+0.223: (I; am telling the sky that Destiny said he is a significant one in my life . Then the sky keeps quiet and all those memories start to slowly drop on the ground one by one , slower than the rain but faster than the I can capture each of them and embed them in my heart; The earth)
+
+How can I give up looking for the answer when there is only silence, so I climbed on the top of the mountain, the wind was very strong, Destiny was sitting there. I got close to her and sat with her, not sure how to start the conversation. So, we kept quiet and sitting there, till I felt pretty cold, and I said, “it’s so cold here”… She said, “that’s because your heart is cold”. “What do you mean?” “You kept saying you love him but from 2013 to 2016, but in fact you were cold to him when you had chance to make him become a significant one. Every destiny has 2 faces, which face it will show to the history depends on your own decision. It was yourself pushed him to someone else, now you are trying to ask me whether he is still the significant one in your life”. I looked at the sky and kept quiet, I did so many immature things in 2014 and pushed him further and further away, now I have overcome those shortages one by one, but he is no longer there to see my changes
+0.875: (yourself; pushed him to; someone)
+0.813: (I; climbed on; the top of the mountain)
+0.791: (yourself; pushed; him)
+0.784: (you; were; cold)
+0.743: (you; had; chance to make him become a significant one)
+0.743: (you; were cold to; him)
+0.732: (you; to ask; me)
+0.7: (I; got close to; her)
+0.7: (I; sat with; her)
+0.662: (Every destiny; has; 2 faces which face it will show to the history)
+0.649: (it; will show to; the history)
+0.639: (the wind; was very; strong)
+0.565: (him; be pushed to; someone)
+0.546: (your heart; is; cold)
+0.526: (him; become; a significant one)
+0.47: (you; now are trying to ask; me)
+0.45: (I; did so many immature things have in; 2014)
+0.44: (I; can give up so looking for; the answer)[enabler=when there is only silence]
+0.421: (many immature things; did have in; 2014)
+0.384: (I; further away now have overcome; those shortages)
+0.369: ("it; 's so here; cold)
+0.292: (I; looked have at; the sky)
+0.276: (you; were cold in; fact)
+0.232: (I; pushed further have; him)
+0.229: (I; did have; many immature things)
+0.118: (I; kept quiet sitting sitting there; I)[enabler=till I felt pretty cold]
+0.118: (we; kept quiet sitting sitting there; I)[enabler=till I felt pretty cold]
+0.088: (I; looked have to; the sky)
+
+Do I love him? I do.I love the way he treats his mom, he must be a great kid to his parents. I love the way he works, the way he thinks, the way he keeps quiet and all those unspeakable details. I love him when he said he was happy when I remembered his birthday in 2015 and I love him to be there online the day before his birthday in 2016, he is very lovely and sweet, but on his birthday, I was too tired in the afternoon because of the job hunting and final projects, I fell asleep the whole afternoon, when I woke up and be online again, he left immediately, I told him I traveled out because I didn’t want him to know that I slept the whole afternoon and think I am lazy, I was really too tired but how could I tell the one I love that I was tired; The Friday before his birthday I got the job offer and I wanted to tel him on that next Monday when I get paper offer. But everything was too late after his birthday… 
+0.879: (I; was too tired in; the afternoon)
+0.825: (I; was too tired because of; the job hunting and final projects)
+0.786: (his birthday; be remembered in; 2015)
+0.785: (he; must be a great kid to; his parents)
+0.775: (him; to be there online; the day)
+0.77: (everything; was too; late)
+0.76: (everything; was too late after; his birthday)
+0.665: (I; wanted to tel him on; that next Monday)[enabler=when I get paper offer]
+0.658: (I; remembered his birthday in; 2015)
+0.63: (his mom; be treats by; the way)
+0.612: (he; keeps; quiet and all)
+0.605: (I; fell; the whole afternoon)[enabler=when I woke up and be online again]
+0.605: (I; got; the job offer)
+0.587: (I; was really too; tired)
+0.584: (he; is very; lovely and sweet)
+0.579: (I; was too tired on; his birthday)
+0.561: (I; could tell; the one I love)
+0.561: (I; love; the way he treats his mom)
+0.547: (he; treats; his mom)
+0.535: (I; told; him)
+0.534: (quiet and all; be keeps by; the way)
+0.533: (I; get; paper offer)
+0.531: (him; to be tel on; that next Monday)
+0.529: (he; was; happy)
+0.525: (I; love; the way he works)
+0.52: (I; love; him)
+0.518: (I; wanted to tel; him)[enabler=when I get paper offer]
+0.516: (I; to tel him on; that next Monday)
+0.516: (I; remembered; his birthday)
+0.489: (I; slept; the whole afternoon)[attrib=him to know]
+0.482: (I; Do love; him)
+0.465: (he; must be; a great kid I love the way I love him when he said he was happy when I remembered his birthday in 2015 and I love him to be there online the day before his birthday in 2016 , he is very lovely and sweet)
+0.44: (I; to tel; him)
+
+The Earth has swallowed all my sweet memories about him and will never return back to me, my heart is undertaking all those bitter memories and I have to learn to be happy again. Destiny said she will give me a gift if I will be focused. I have been focused for a long time and now I can control my emotion well, I can be very stable to do my work and my side projects and be nice to others. Am I good enough to get your gift? Could you bring Emmanuel back to my life?
+0.677: (Destiny; said of; she)
+0.648: (she; will give me; a gift)[enabler=if I will be focused;attrib=Destiny said]
+0.631: (I; have been focused for; a long time)
+0.62: (I; can be very; stable)
+0.58: (you; Could bring back to my life; Emmanuel)
+0.545: (The Earth; has will never return back to; me)
+0.529: (The Earth; has swallowed will; all my sweet memories)
+0.368: (my heart; is now can control well; my emotion)
+0.32: (I; Am good enough to get; your gift)
+0.206: (I; is now can control well; my emotion)
+0.197: (my heart; is undertaking I have to learn to be happy again can; all those bitter memories . Destiny said she will give me a gift if I will be focused)
+0.051: (I; is undertaking I have to learn to be happy again can; all those bitter memories . Destiny said she will give me a gift if I will be focused)
+
