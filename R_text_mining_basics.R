@@ -5,7 +5,7 @@ install.packages("Rcampdf", repos = "http://datacube.wu.ac.at/", type = "source"
 
 
 ## LOAD DATA
-path<- "[your file path]"
+path<- "[your text file directory path]"
 library(tm)   
 docs <- Corpus(DirSource(path))   
 summary(docs)
@@ -84,4 +84,30 @@ set.seed(410)
 wordcloud(names(freq), freq, min.freq=20, scale=c(5, .1), colors=brewer.pal(6, "Dark2"))
 set.seed(410)   
 dark2 <- brewer.pal(6, "Dark2")   
-wordcloud(names(freq), freq, max.words=50, rot.per=0.2, colors=dark2)   
+wordcloud(names(freq), freq, max.words=50, rot.per=0.2, colors=dark2) 
+
+# cluster by term similarity
+dtm_matrix <- as.matrix(dtm)
+dim(dtm_matrix)
+filtered_matrix <- dtm_matrix[,dtm_matrix[nrow(dtm_matrix),]>10]   # filter out low frequency terms, otherwise the plot is not clear
+dim(as.matrix(filtered_matrix))
+library(cluster)   
+d <- dist(filtered_matrix, method="euclidian")   
+fit <- hclust(d=d, method="ward")   
+fit 
+plot(fit, hang=-1)
+groups <- cutree(fit, k=5)   # 5 clusters here  
+rect.hclust(fit, k=5, border="red")
+
+library(fpc)   
+d <- dist(filtered_matrix, method="euclidian")   
+kfit <- kmeans(d, 3)    # 3 keamns cluster
+clusplot(as.matrix(d), kfit$cluster, color=T, shade=T, labels=2, lines=0) 
+
+# get optimal number of clusters
+wss <- 2:20
+for (i in 2:20) wss[i] <- sum(kmeans(filtered_matrix,centers=i,nstart=5)$withinss)
+plot(2:20, wss[2:20], type="b", xlab="Number of Clusters",ylab="Within groups sum of squares")
+d <- dist(filtered_matrix, method="euclidian")   
+kfit <- kmeans(d, 3)    # 3 keamns cluster is the optimal since SSE droped dramatically
+clusplot(as.matrix(d), kfit$cluster, color=T, shade=T, labels=2, lines=0) 
