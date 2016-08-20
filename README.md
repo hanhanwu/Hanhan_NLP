@@ -45,3 +45,7 @@ NLP research and implementation
 -- R TEXT MINING PACKAGE
 * R text mining basics: 
 * Helpful resource - sorting R matrix: https://www.r-bloggers.com/sorting-rows-and-colums-in-a-matrix-with-some-music-and-some-magic/
+
+
+-- My NLP Presentation
+* 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/hanhan_NLP_vancity.pdf
