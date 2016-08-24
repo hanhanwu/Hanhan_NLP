@@ -48,4 +48,4 @@ NLP research and implementation
 
 
 -- My NLP Presentation
-* 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/hanhan_NLP_vancity.pdf
+* 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Hanhan_NLP_Vancity.pdf
