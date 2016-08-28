@@ -24,6 +24,10 @@ NLP research and implementation
 * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
 
 
+<b>LEARNING RESOURCES</b>
+* SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
+* SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
+
 
 <b>Advanced NLP Tools</b>
 
