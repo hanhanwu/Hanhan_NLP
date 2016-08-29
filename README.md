@@ -54,3 +54,7 @@ NLP research and implementation
 
 -- My NLP Presentation
 * 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Hanhan_NLP_Presentation.pdf
+
+
+<b>INSPIRING, when I think NLP is very boring</b>
+* IBM Watson competes in Jeopardy: https://www.youtube.com/watch?v=lI-M7O_bRNg
