@@ -29,6 +29,11 @@ NLP research and implementation
 * SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
 
 
+<b>PRACTICE</b>
+* When the text context is very short, and you cannot build the search engine by simply calculating query terms distance, query terms frequency or query terms position. 
+* In the code here, I am trying different methods to allow better key words search. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
+
+
 <b>Advanced NLP Tools</b>
 
 -- UW NLP TOOLS
