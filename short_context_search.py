@@ -93,12 +93,12 @@ s2 = tmp2.filter(tmp2.S2 < 5).orderBy(tmp2.S2)
 def ordered_token(stemmed_token_lst, merchant_info):
   score = 0
   idx_q = 0
-  for tk in stemmed_token_lst:
+  for tk in stemmed_token_lst:     # I'm using Spark and could only use this type of for loop
     if tk in merchant_info:
       score += 1
       if idx_q == 0: continue
       idx_m = merchant_info.index(tk)
-      if stemmed_token_lst[idx_q-1] in merchant_info[0:idx_m]:
+      if stemmed_token_lst[idx_q-1] in merchant_info[0:idx_m]:    # not using recursion because both text is short, and I'm wondering with Spark distribution system, can I use recursion
         score += 1
     idx_q += 1
     
