@@ -38,7 +38,7 @@ def closest_token(stemmed_token_lst, merchant_info):
 
 calculate_closest_tokenUDF = udf(lambda r: closest_token(stemmed_q3, r.lower()), IntegerType())
 tmp2 = df7.withColumn("S2", calculate_closest_tokenUDF(df7.Merchant_Info))
-s2 = tmp2.orderBy(tmp2.S2)
+s2 = tmp2.filter(tmp2.S2 < 5).orderBy(tmp2.S2)
 
 
 
@@ -62,7 +62,7 @@ def closest_token(stemmed_token_lst, merchant_info):
 
 calculate_closest_tokenUDF = udf(lambda r: closest_token(stemmed_q3, r.lower()), IntegerType())
 tmp2 = df7.withColumn("S2", calculate_closest_tokenUDF(df7.Merchant_Info))
-s2 = tmp2.orderBy(tmp2.S2)
+s2 = tmp2.filter(tmp2.S2 < 5).orderBy(tmp2.S2)
 
 
 
@@ -84,8 +84,30 @@ def closest_token(stemmed_token_lst, merchant_info):
 
 calculate_closest_tokenUDF = udf(lambda r: closest_token(stemmed_q2, r.lower()), IntegerType())
 tmp2 = df7.withColumn("S2", calculate_closest_tokenUDF(df7.Merchant_Info))
-s2 = tmp2.orderBy(tmp2.S2)
+s2 = tmp2.filter(tmp2.S2 < 5).orderBy(tmp2.S2)
 
+
+
+# method 3: query term order
+## if the token exist, get 1 more score, if its previous token is also in & before, get 1 more score
+def ordered_token(stemmed_token_lst, merchant_info):
+  score = 0
+  idx_q = 0
+  for tk in stemmed_token_lst:
+    if tk in merchant_info:
+      score += 1
+      if idx_q == 0: continue
+      idx_m = merchant_info.index(tk)
+      if stemmed_token_lst[idx_q-1] in merchant_info[0:idx_m]:
+        score += 1
+    idx_q += 1
+    
+  return score
+
+
+calculate_ordered_tokenUDF = udf(lambda r: ordered_token(stemmed_q5, r.lower()), IntegerType())
+tmp3 = df7.withColumn("S3", calculate_ordered_tokenUDF(df7.Merchant_Info))
+s3 = tmp3.orderBy(tmp3.S3.desc())
 
 
 # TO BE CONTINUED...
