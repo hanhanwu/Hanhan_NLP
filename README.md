@@ -32,10 +32,14 @@ NLP research and implementation
 
 
 <b>PRACTICE</b>
-* When the text context is very short, and you cannot build the search engine by simply calculating query terms distance, query terms frequency or query terms position. 
-* In the code here, I am trying different methods to allow better key words search for short context. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
+* Keywords Search for Short Context
+  * When the text context is very short, and you cannot build the search engine by simply calculating query terms distance, query terms frequency or query terms position. 
+  * In the code here, I am trying different methods to allow better key words search for short context. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
+  * NOTE: If the user input contains plural, stemming the query tokens is better
+  * NOTE: However, in many cases, the semmed tokens cannot be found in the text with python, for example "beauty" will be stemmed into "beauti", in these cases, no stemming returns better result. This is especially important in method 4, since it will be ordered by the number of query token existence first, then will be orered by the token distance
 
-* Internet slang makes text analysis less accurate. This website contains the defination for those slangs, and the source web page is parsable: http://www.internetslang.com/list.asp?i=all
+* Deal With Internet Slang
+  * Internet slang makes text analysis less accurate. This website contains the defination for those slangs, and the source web page is parsable: http://www.internetslang.com/list.asp?i=all
 
 
 <b>Advanced NLP Tools</b>
