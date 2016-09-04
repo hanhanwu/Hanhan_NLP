@@ -20,19 +20,22 @@ NLP research and implementation
 * R HMM
  * https://cran.r-project.org/web/packages/HMM/HMM.pdf
 
-* <b> Author Recognition</b>
+* <b>Author Recognition</b>
 * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
 
 
 <b>LEARNING RESOURCES</b>
 * SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
 * SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
+* Deep Leanring Course with NLP: http://cs224d.stanford.edu/syllabus.html
 * Deep Learning in NLP & Speech/Audio: https://www.analyticsvidhya.com/blog/2016/08/deep-learning-path/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 <b>PRACTICE</b>
 * When the text context is very short, and you cannot build the search engine by simply calculating query terms distance, query terms frequency or query terms position. 
-* In the code here, I am trying different methods to allow better key words search. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
+* In the code here, I am trying different methods to allow better key words search for short context. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
+
+* Internet slang makes text analysis less accurate. This website contains the defination for those slangs, and the source web page is parsable: http://www.internetslang.com/list.asp?i=all
 
 
 <b>Advanced NLP Tools</b>
