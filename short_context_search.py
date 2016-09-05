@@ -184,7 +184,7 @@ s4 = tmp4.orderBy(tmp1.S1.desc(), tmp4.S4.asc())
 
 
 
-# REAL TIME SEARCH TRAINING WITH 1 HIDDEN LAYER NEURAL NETWORK
+# method 5: REAL TIME SEARCH TRAINING WITH 1 HIDDEN LAYER NEURAL NETWORK
 ## It means, it learns from users' input along the time
 
 ## CELL 1
