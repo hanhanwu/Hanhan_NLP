@@ -183,4 +183,250 @@ tmp4 = tmp1.withColumn("S4", calculate_token_distanceUDF(tmp1.Merchant_Info))
 s4 = tmp4.orderBy(tmp1.S1.desc(), tmp4.S4.asc())
 
 
-# TO BE CONTINUED...
+
+# REAL TIME SEARCH TRAINING WITH 1 HIDDEN LAYER NEURAL NETWORK
+## It means, it learns from users' input along the time
+
+## CELL 1
+from sqlite3 import dbapi2 as sqlite
+from sets import Set
+from math import tanh
+
+# the slope of the function for any output y
+# the output determines how much a node's total input has to change
+def dtanh(y):
+    return 1.0 - y*y
+
+class onehidden_nn:
+    def __init__(self, dbname):
+        self.con = sqlite.connect(dbname)
+        
+        
+    def __del__(self):
+        self.con.close()
+        
+        
+    def create_tables(self):
+        self.con.execute('drop table if exists hidden_node')
+        self.con.execute('drop table if exists input_hidden')
+        self.con.execute('drop table if exists hidden_output')
+        
+        self.con.execute('create table hidden_node(create_key)')
+        self.con.execute('create table input_hidden(fromid, toid, strength)')
+        self.con.execute('create table hidden_output(fromid, toid, strength)')
+        
+        self.con.execute('create index if not exists hidden_nodeidx on hidden_node(create_key)')
+        self.con.execute('create index if not exists ih_fromidx on input_hidden(fromid)')
+        self.con.execute('create index if not exists ih_toidx on input_hidden(toid)')
+        self.con.execute('create index if not exists ho_fromidx on hidden_output(fromid)')
+        self.con.execute('create index if not exists ho_toidx on hidden_output(toid)')
+        self.con.commit()
+        
+    
+    # get the strength of a connection in input_hidden table or hidden_output table
+    def get_strength(self, fromid, toid, layer):
+        if layer == 0: tb = 'input_hidden'
+        else: tb = 'hidden_output'
+        
+        cur = self.con.execute("""
+        select strength from %s where fromid=%d and toid=%d
+        """ % (tb, fromid, toid)).fetchone()
+        if cur == None:
+            if layer == 0: return -0.2
+            elif layer == 1: return 0
+        return cur[0]
+    
+    
+    # if the connection exists, update the strength, otherwise insert a new connection with the strength value
+    def set_strength(self, fromid, toid, layer, new_strength):
+        if layer == 0: tb = 'input_hidden'
+        else: tb = 'hidden_output'
+        
+        cur = self.con.execute("""
+        select rowid from %s where fromid=%d and toid=%d
+        """ % (tb, fromid, toid)).fetchone()
+        if cur == None:
+            self.con.execute("""
+            insert into %s (fromid, toid, strength) values (%d,%d,%f)
+            """ % (tb, fromid, toid, new_strength))
+        else:
+            self.con.execute("""
+            update %s set strength=%f where rowid=%d
+            """ % (tb, new_strength, cur[0]))
+        self.con.commit()
+        
+        
+    def create_hidden_node(self, words, urls):
+        if len(words) > 3: return
+        create_key = '_'.join(sorted([str(wid) for wid in words]))
+        cur = self.con.execute("""
+        select rowid from hidden_node where create_key='%s'
+        """ % create_key).fetchone()
+        
+        if cur == None:
+            cur = self.con.execute("""
+            insert into hidden_node (create_key) values ('%s')
+            """ % create_key)
+            hidden_id = cur.lastrowid
+        else:
+            hidden_id = cur[0]
+        for wid in words:
+            self.set_strength(wid, hidden_id, 0, 1.0/len(words))
+        for uid in urls:
+            self.set_strength(hidden_id, uid, 1, 0.1)
+        self.con.commit()
+        
+    
+    # using the input or output ids to find the hidden nodes    
+    def find_hidden_nodes(self, words, urls):
+        hidden_nodes = Set()
+        for wid in words:
+            for (hidden_node,) in self.con.execute('select toid from input_hidden where fromid=%d' % wid):
+                hidden_nodes.add(hidden_node)
+        for uid in urls:
+            for (hidden_node,) in self.con.execute('select fromid from hidden_output where toid=%d' % uid):
+                hidden_nodes.add(hidden_node)
+        return list(hidden_nodes)
+    
+    
+    # setup neural network
+    def setup_nn(self, words, urls):
+        self.words = words
+        self.urls = urls
+        self.hidden_nodes = self.find_hidden_nodes(words, urls)
+        
+        self.li = [1.0]*len(self.words)
+        self.lo = [1.0]*len(self.urls)
+        self.lh = [1.0]*len(self.hidden_nodes)
+        
+        # build the weight matrix for input_hidden and hidden_output
+        self.w_ih = [[self.get_strength(wid, hid, 0) for hid in self.hidden_nodes] for wid in self.words]
+        self.w_ho = [[self.get_strength(hid, uid, 1) for uid in self.urls] for hid in self.hidden_nodes]
+        
+    def feedforward(self, words, urls):
+        
+        for j in range(len(self.hidden_nodes)):
+            sum = 0.0
+            for i in range(len(self.words)):
+                sum += self.li[i]*self.w_ih[i][j]
+            self.lh[j] = tanh(sum)
+            
+        for j in range(len(self.urls)):
+            sum = 0.0
+            for i in range(len(self.hidden_nodes)):
+                sum += self.lh[i]*self.w_ho[i][j]
+            self.lo[j] = tanh(sum)
+            
+        return self.lo
+    
+    
+    def backpropagrate(self, targets, N=0.5):
+        output_deltas = [0.0]*len(self.urls)
+        hidden_deltas = [0.0]*len(self.words)
+        
+        for i in range(len(self.urls)):
+            err = targets[i] - self.lo[i]
+            output_deltas[i] = dtanh(self.lo[i])*err
+        
+        for j in range(len(self.hidden_nodes)):
+            sum_err = 0.0
+            for k in range(len(self.urls)):
+                sum_err += output_deltas[k]*self.w_ho[j][k]
+            hidden_deltas[j] = dtanh(self.lh[j])*sum_err
+            
+        # update hidden_output weights
+        for i in range(len(self.hidden_nodes)):
+            for j in range(len(self.urls)):
+                change = output_deltas[j]*self.lh[i]
+                self.w_ho[i][j] += change*N
+        
+        #  update input_hidden weights
+        for i in range(len(self.words)):
+            for j in range(len(self.hidden_nodes)):
+                change = hidden_deltas[j]*self.li[i]
+                self.w_ih[i][j] += change*N
+        
+        
+    def update_db(self):
+        for i in range(len(self.words)):
+            for j in range(len(self.hidden_nodes)):
+                self.set_strength(self.words[i], self.hidden_nodes[j], 0, self.w_ih[i][j])
+        
+        for i in range(len(self.hidden_nodes)):
+            for j in range(len(self.urls)):
+                self.set_strength(self.hidden_nodes[i], self.urls[j], 1, self.w_ho[i][j])
+                
+                
+    def train_nn(self, words, urls, selected_url):
+        #print '********feedforward********'
+        feedforward_output = self.feedforward(words, urls)
+        #print feedforward_output
+        
+        #print '********backpropagrate********'
+        targets = [0.0]*len(urls)
+        targets[urls.index(selected_url)] = 1.0
+        
+        self.backpropagrate(targets)
+        self.update_db()
+        results = self.feedforward(words, urls)
+        return results
+        
+     
+## CELL 2
+from pyspark.sql import Row
+
+rdd0 = s4.rdd.zipWithIndex().cache()
+rdd1 = rdd0.map(lambda (m,idx): Row(Merchant_Info=m[0], S1=m[1], S4=m[2], Idx=idx))
+selected_rdd = rdd0.filter(lambda (m, idx): (m[1]!=0 or m[2]!=0))
+
+
+## CELL 3
+NN_df = rdd1.toDF()
+NN_df = NN_df.select(NN_df.Idx, NN_df.Merchant_Info)
+NN_df.show(truncate=False)
+  
+  
+## CELL 4
+query_rdd = sc.parallelize(q6).zipWithIndex()
+query_idx = query_rdd.map(lambda (t, idx): idx)
+merchant_idx = rdd0.map(lambda (m, idx): idx)
+selected_merchant_idx = selected_rdd.map(lambda (m, idx): idx)
+
+query_lst = query_idx.collect()
+all_merchant = merchant_idx.collect()
+selected_merchant_lst = selected_merchant_idx.collect()
+
+
+## CELL 5
+def train_NN(query_lst, all_merchant, selected_merchant_lst):
+  dbname = 'neural_network.db'
+  my_nn = onehidden_nn(dbname)
+  my_nn.create_tables()
+  result = None
+  
+  # create hidden nodes
+  my_nn.create_hidden_node(query_lst, all_merchant)
+
+  # input-hidden
+  my_nn.con.execute('select * from input_hidden')
+  # hidden-output
+  my_nn.con.execute('select * from hidden_output')
+
+  # setup NN
+  my_nn.setup_nn(query_lst, all_merchant)
+  
+  for selected_merchant in selected_merchant_lst:
+    result = my_nn.train_nn(query_lst, all_merchant, selected_merchant)
+  
+  return result
+  
+  
+## CELL 6
+NN_results = sc.parallelize(train_NN(query_lst, all_merchant, selected_merchant_lst)).zipWithIndex().toDF().withColumnRenamed('_1', 'NN_score')
+cond = [NN_results._2 == NN_df.Idx]
+final_NN_df = NN_df.join(NN_results, cond, 'inner').select(NN_df.Idx, NN_df.Merchant_Info, NN_results.NN_score).orderBy(NN_results.NN_score.desc())
+
+
+## CELL 7
+# The out put is the final score after users have chose the first 3 choices seperately
+final_NN_df.show(truncate=False)
