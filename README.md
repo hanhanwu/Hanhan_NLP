@@ -39,9 +39,6 @@ NLP research and implementation
   * NOTE: If the user input contains plural, stemming the query tokens is better
   * NOTE: However, in many cases, the semmed tokens cannot be found in the text with python, for example "beauty" will be stemmed into "beauti", in these cases, no stemming returns better result. This is especially important in method 4, since it will be ordered by the number of query token existence first, then will be orered by the token distance
 
-* Deal With Internet Slang
-  * Internet slang makes text analysis less accurate. This website contains the defination for those slangs, and the source web page is parsable: http://www.internetslang.com/list.asp?i=all
-
 
 <b>Advanced NLP Tools</b>
 
