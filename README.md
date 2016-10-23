@@ -40,6 +40,10 @@ NLP research and implementation
   * NOTE: If the user input contains plural, stemming the query tokens is better
   * NOTE: However, in many cases, the semmed tokens cannot be found in the text with python, for example "beauty" will be stemmed into "beauti", in these cases, no stemming returns better result. This is especially important in method 4, since it will be ordered by the number of query token existence first, then will be orered by the token distance
 
+* Text Feature Selection Example
+ * Python code: text_feature_selection_example.py
+ * This is just an example to do feature engineering on text data, which means, besides the individual words we could use as features, we could also generate other features based on the text to help later data analysis work.
+
 
 <b>Advanced NLP Tools</b>
 
