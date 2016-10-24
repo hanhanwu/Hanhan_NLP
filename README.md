@@ -44,6 +44,10 @@ NLP research and implementation
  * Python code: text_feature_selection_example.py
  * This is just an example to do feature engineering on text data, which means, besides the individual words we could use as features, we could also generate other features based on the text to help later data analysis work.
 
+* Spam Detection with Akismet
+ * Akismet Python examples: http://www.programcreek.com/python/example/56583/akismet.verify_key
+ * My code with Akismet for spam detection: https://github.com/hanhanwu/Hanhan_NLP/blob/master/spam_detection_Akismet.py
+
 
 <b>Advanced NLP Tools</b>
 
