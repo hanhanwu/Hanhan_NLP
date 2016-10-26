@@ -67,6 +67,11 @@ NLP research and implementation
 
 * Open Source Statistical Machine Translation: http://www.statmt.org/
 
+* Python Scrapy Web Crawler
+ * Scrapy General: https://github.com/scrapy/scrapy
+ * Scrapy documents: https://doc.scrapy.org/en/latest/
+ * Pyhton yield: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
+
 
 -- R TEXT MINING PACKAGE
 * R text mining basics: 
