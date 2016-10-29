@@ -67,6 +67,8 @@ NLP research and implementation
 
 * Open Source Statistical Machine Translation: http://www.statmt.org/
 
+* SFU Parser: https://github.com/sfu-natlang/glm-parser
+
 * Python Scrapy Web Crawler
  * Scrapy General: https://github.com/scrapy/scrapy
  * Scrapy documents: https://doc.scrapy.org/en/latest/
