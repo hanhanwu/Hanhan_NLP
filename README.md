@@ -79,6 +79,13 @@ NLP research and implementation
  * Download NER package: http://nlp.stanford.edu/software/CRF-NER.shtml#Download
  * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
 
+* nltk Sentiment Analysis
+ * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
+ * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
+ * After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
+ * <b>Python 2.x only</b>
+ * My sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
+
 
 -- R TEXT MINING PACKAGE
 * R text mining basics: 
