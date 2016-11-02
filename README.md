@@ -73,6 +73,11 @@ NLP research and implementation
  * Scrapy General: https://github.com/scrapy/scrapy
  * Scrapy documents: https://doc.scrapy.org/en/latest/
  * Pyhton yield: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
+ 
+* Stanford Named Entity Recognizer (NER)
+ * NER is able to regognize names of different things/people in English words
+ * Download NER package: http://nlp.stanford.edu/software/CRF-NER.shtml#Download
+ * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
 
 
 -- R TEXT MINING PACKAGE
