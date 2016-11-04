@@ -13,7 +13,8 @@ sentences = [
               """Heartbreaking!""",
               """time kills everything""",
               """I should learn Scala sson, always write Python has some limited ability...""",
-              """I like seeing people reply my emails early when I get here early, I hate scilence! But when I am working, I am very quiet too..."""
+              """I like seeing people reply my emails early when I get here early, I hate scilence! But when I am working, I am very quiet too...""",
+              """The saddest thing is, long long long time ago, you satrted to like this person because you felt the similarity, but when time passed by, when that person is becoming mroe and more indifference, you gradually realized you may be living in 2 different worlds and you are pusuing different career, but this is not the most painful part. The most painful part is, when you are well prepared to embrace this difference (since if you really like each other, you can grow together and help each other thrive), but that person does not think so at all. Gradually, you have realized, there must be another woman there in his life, but sadly, you simply lie to yourself all the time and do not want to admit, do not want to let him go.... Meanwhile, you cannot tell anyone such as parents or friends, they will all blame you, for not let go in such a long time"""
              ]
 for sentence in sentences:
     print(sentence)
