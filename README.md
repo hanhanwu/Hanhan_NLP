@@ -48,10 +48,16 @@ NLP research and implementation
  * Akismet Python examples: http://www.programcreek.com/python/example/56583/akismet.verify_key
  * My code with Akismet for spam detection: https://github.com/hanhanwu/Hanhan_NLP/blob/master/spam_detection_Akismet.py
 
-* Web Mining Practice
+* Login Spider
  * Crawl web pages that need login: https://github.com/hanhanwu/Hanhan_NLP/blob/master/basic_authentication_spider.py
  * When running the code with Scrapy, use terminal command. cd to the top folder of your project, then type `scrapy runspider [spider file path]/[spider file name].py`
  * NOTE: this method does not work for all the web pages that needs login...
+ 
+* Looking for Alternatives for Google Search API
+ * Google search API sets limitations per day, only could get 32 search reuslts each day
+ * xgoogle, it has a pretty good tutorial, but google has blocked it, since Google doesn't allow automated search... http://www.catonmat.net/blog/python-library-for-google-search/
+ * ???? Yahoo YQL looks could return much more results: https://developer.yahoo.com/yql/guide/usage_info_limits.html
+ * ???? Bing Search API: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api/documentation
 
 
 <b>Advanced NLP Tools</b>
