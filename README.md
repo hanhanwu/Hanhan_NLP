@@ -48,6 +48,11 @@ NLP research and implementation
  * Akismet Python examples: http://www.programcreek.com/python/example/56583/akismet.verify_key
  * My code with Akismet for spam detection: https://github.com/hanhanwu/Hanhan_NLP/blob/master/spam_detection_Akismet.py
 
+* Web Mining Practice
+ * Crawl web pages that need login: https://github.com/hanhanwu/Hanhan_NLP/blob/master/basic_authentication_spider.py
+ * When running the code with Scrapy, use terminal command. cd to the top folder of your project, then type `scrapy runspider [spider file path]/[spider file name].py`
+ * NOTE: this method does not work for all the web pages that needs login...
+
 
 <b>Advanced NLP Tools</b>
 
