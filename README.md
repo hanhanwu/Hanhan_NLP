@@ -59,6 +59,9 @@ NLP research and implementation
  * ???? Yahoo YQL looks could return much more results: https://developer.yahoo.com/yql/guide/usage_info_limits.html
  * ???? Bing Search API: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api/documentation
 
+* How to improve search accuracy with Google Search
+ * Simple video explains how google search works: https://www.youtube.com/watch?v=KyCYyoGusqs
+
 
 <b>Advanced NLP Tools</b>
 
