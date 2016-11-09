@@ -5,11 +5,11 @@ path_pre = "[your full path for NER package]/stanford-ner-2015-12-09/"
 
 st = st.StanfordNERTagger(path_pre+'classifiers/english.all.3class.distsim.crf.ser.gz', path_pre+'stanford-ner.jar')
 
-text1 = """emmanuel means jesus!"""
-text2 = """Emmanuel means jesus!"""
+text1 = """Reality checks await for ambitious Liberals"""
+text2 = """Reality checks await for ambitious Liberals!"""
 text3 = """Emmanuel means Jesus!"""
-text4 = """Does Emmanuel like Ice Cream like Hanhan does?"""
-text5 = """Emmanuel, miss Hanhan?"""
+text4 = """Does Cherry like Ice Cream like Hanhan does?"""
+text5 = """Reality checks await for ambitious Liberals?"""
 text6 = """Does Tim Hortons like KFC?"""
 
 
