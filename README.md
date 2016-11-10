@@ -59,8 +59,7 @@ NLP research and implementation
  * Yahoo YQL Guide: https://developer.yahoo.com/yql/guide/usage_info_limits.html
  * Yahoo Dev Center, to get the key and secret for YQL boss.search: https://developer.yahoo.com/apps/
  * yql-tables (not sure how many of them are still valid): https://github.com/hanhanwu/yql-tables
- 
- * ???? Bing Search API: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api/documentation
+ * Bing Search API Guide: https://msdn.microsoft.com/en-us/library/dn760781.aspx
 
 * How to improve search accuracy with Google Search
  * Simple video explains how google search works: https://www.youtube.com/watch?v=KyCYyoGusqs
