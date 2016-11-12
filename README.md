@@ -61,8 +61,13 @@ NLP research and implementation
  * yql open tables: https://github.com/hanhanwu/yql-tables
  * yql health checker, to check the current situations of yql open tables (I really like this feature, when you are clicking the tables here, it leads to YQL Console to allow you run the test query immediately): https://www.datatables.org/healthchecker/
  * <b>Example</b>, yql with Bing Web Search: https://developer.yahoo.com/yql/console/?env=store://datatables.org/alltableswithkeys&q=SELECT+*+FROM+microsoft.bing.web+WHERE+query%3D%27stackoverflow%27#h=SELECT+*+FROM+microsoft.bing.web+WHERE+query%3D'stackoverflow'
+ * But, yql always returns empty results for my queries....
  
+ * Bing APIs: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api/documentation
  * Bing Search API Guide: https://msdn.microsoft.com/en-us/library/dn760781.aspx
+ * In order to use Bing Search API, need to get the subscription key here: https://www.microsoft.com/cognitive-services/en-us/subscriptions
+ * API Test Console: https://dev.cognitive.microsoft.com/docs/services/56b43eeccf5ff8098cef3807/operations/56b4447dcf5ff8098cef380d/console
+ 
 
 * How to improve search accuracy with Google Search
  * Simple video explains how google search works: https://www.youtube.com/watch?v=KyCYyoGusqs
