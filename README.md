@@ -58,7 +58,10 @@ NLP research and implementation
  * xgoogle, it has a pretty good tutorial, but google has blocked it, since Google doesn't allow automated search... http://www.catonmat.net/blog/python-library-for-google-search/
  * Yahoo YQL Guide: https://developer.yahoo.com/yql/guide/usage_info_limits.html
  * Yahoo Dev Center, to get the key and secret for YQL boss.search: https://developer.yahoo.com/apps/
- * yql-tables (not sure how many of them are still valid): https://github.com/hanhanwu/yql-tables
+ * yql open tables: https://github.com/hanhanwu/yql-tables
+ * yql health checker, to check the current situations of yql open tables (I really like this feature, when you are clicking the tables here, it leads to YQL Console to allow you run the test query immediately): https://www.datatables.org/healthchecker/
+ * <b>Example</b>, yql with Bing Web Search: https://developer.yahoo.com/yql/console/?env=store://datatables.org/alltableswithkeys&q=select%20*%20from%20microsoft.bing.web%20where%20query=%22sushi%22#h=select+*+from+microsoft.bing.web+where+query%3D%22What+happened+to+the+promised+ban%3F%22
+ 
  * Bing Search API Guide: https://msdn.microsoft.com/en-us/library/dn760781.aspx
 
 * How to improve search accuracy with Google Search
