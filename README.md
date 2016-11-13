@@ -69,6 +69,10 @@ NLP research and implementation
  * In order to use Bing Search API, need to get the subscription key here: https://www.microsoft.com/cognitive-services/en-us/subscriptions
  * API Test Console: https://dev.cognitive.microsoft.com/docs/services/56b43eeccf5ff8098cef3807/operations/56b4447dcf5ff8098cef380d/console
  * Python Bing Search (it seems that the api key here should be got form Azure Market Place....): https://github.com/hanhanwu/py-bing-search
+ * When I was using Python Bing Search, it was showing the authorization method is not valid, I guess this maybe the reason:
+ https://datamarket.azure.com/dataset/bing/search
+ * It changes v2 to v5, and in order to get all those info, I need to purchase in Azure Market Place: https://msdn.microsoft.com/en-US/library/mt707570.aspx
+ * Bing Web Search API Pricing: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api
  
 
 * How to improve search accuracy with Google Search
