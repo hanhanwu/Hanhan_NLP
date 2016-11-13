@@ -56,6 +56,7 @@ NLP research and implementation
 * Looking for Alternatives for Google Search API
  * Google search API sets limitations per day, only could get 32 search reuslts each day
  * xgoogle, it has a pretty good tutorial, but google has blocked it, since Google doesn't allow automated search... http://www.catonmat.net/blog/python-library-for-google-search/
+ * pygoogle is no longer available either, it recommends to use Google Custom Search
  * Yahoo YQL Guide: https://developer.yahoo.com/yql/guide/usage_info_limits.html
  * Yahoo Dev Center, to get the key and secret for YQL boss.search: https://developer.yahoo.com/apps/
  * yql open tables: https://github.com/hanhanwu/yql-tables
