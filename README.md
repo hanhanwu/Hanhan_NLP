@@ -82,6 +82,9 @@ NLP research and implementation
  * The control panel is easy and fast to use, you can generate customized search engine within seconds, and google will create a web version as well as html code and tell you how to copy the code to html page: https://cse.google.com/cse/all
  * My CSE test html code, I just opened JSBin console, opened a HTML template and copy the generate code between <body></body>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/google_cse_sample.html
  * If you need the search results obey a certain url pattern, check google search query operator, very helpful!: https://support.google.com/websearch/answer/2466433?visit_id=1-636146162684675642-3633116773&rd=1
+ * Now I want to get the search results from pyhton code, it also simple. This is the detail tutorials about where to get your cx (Custom Search Engine id), key (API Key): https://developers.google.com/custom-search/json-api/v1/reference/cse/list
+ * Pricing if you want to have more search requests: https://developers.google.com/custom-search/json-api/v1/overview#key
+ * My sample code about how to get the results through python, with FREE version: https://github.com/hanhanwu/Hanhan_NLP/blob/master/google_cse_sample_python_call.py
 
 
 
