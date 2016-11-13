@@ -87,6 +87,10 @@ NLP research and implementation
  * My CSE test html code, I just opened JSBin console, opened a HTML template and copy the generate code between <body></body>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/google_cse_sample.html
  * If you need the search results obey a certain url pattern, check google search query operator, very helpful!: https://support.google.com/websearch/answer/2466433?visit_id=1-636146162684675642-3633116773&rd=1
  * Now I want to get the search results from pyhton code, it also simple. This is the detail tutorials about where to get your cx (Custom Search Engine id), key (API Key): https://developers.google.com/custom-search/json-api/v1/reference/cse/list
+ * In order to get cx, you need to visit this website: https://cse.google.com/cse/all
+ * Create a Custom Search Engine, it's very fast! Once you have created one, you will find cx=.... through the url in your browser
+ * In order to get Google API Key, you need to go to Google Dev Center: https://console.developers.google.com/apis/dashboard
+ * In Google Dev Center, first click Dashboard, then Click 'ENABLE API' and enable 'Custom Search API'. Next, click 'Credentials', and click 'Create Credential' to create an API Key
  * Pricing if you want to have more search requests: https://developers.google.com/custom-search/json-api/v1/overview#key
  * My sample code about how to get the results through python, with FREE version: https://github.com/hanhanwu/Hanhan_NLP/blob/master/google_cse_sample_python_call.py
 
