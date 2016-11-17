@@ -93,6 +93,7 @@ NLP research and implementation
  * In Google Dev Center, first click Dashboard, then Click 'ENABLE API' and enable 'Custom Search API'. Next, click 'Credentials', and click 'Create Credential' to create an API Key
  * Pricing if you want to have more search requests: https://developers.google.com/custom-search/json-api/v1/overview#key
  * My sample code about how to get the results through python, with FREE version: https://github.com/hanhanwu/Hanhan_NLP/blob/master/google_cse_sample_python_call.py
+ * Google CSE is great, cheaper than many other web search apis, even cheaper than Google Search API, and it's well documented. One thing need to note that google CSE didn't mention is their limitations per second. Bing Search API has 5 query limitation per second. I guess Google CSE also has limitation, therefore only using for loop to execute multiple queries will get errors. You can simply add `time.sleep(1)` in your for loop. Check my code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/multiple_query_google_cse.py
 
 
 
