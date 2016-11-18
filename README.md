@@ -134,6 +134,9 @@ NLP research and implementation
  * <b>Python 2.x only</b>
  * My sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
 
+* Crowd Sourcing for Sentiment Analysis
+ * CrowdFlower: https://www.crowdflower.com/use-case/sentiment-analysis/
+
 
 -- R TEXT MINING PACKAGE
 * R text mining basics: 
