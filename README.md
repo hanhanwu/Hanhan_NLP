@@ -94,6 +94,13 @@ NLP research and implementation
  * Pricing if you want to have more search requests: https://developers.google.com/custom-search/json-api/v1/overview#key
  * My sample code about how to get the results through python, with FREE version: https://github.com/hanhanwu/Hanhan_NLP/blob/master/google_cse_sample_python_call.py
  * Google CSE is great, cheaper than many other web search apis, even cheaper than Google Search API, and it's well documented. One thing need to note that google CSE didn't mention is their limitations per second. Bing Search API has 5 query limitation per second. I guess Google CSE also has limitation, therefore only using for loop to execute multiple queries will get errors. You can simply add `time.sleep(1)` in your for loop. Check my code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/multiple_query_google_cse.py
+ 
+
+* Gigya Javascript Web Parser
+ * One year ago, Amazon Camel-Camel-Camel suddenly changed its website source code and everything parsable has become Javascript, therefore I lost many data, and thought Javascript written website may not be parsable. Today, I just tried the Gigya API (the researchers I'm working with may have paid this API...), it will return all the content hidden behind the Javascript code!
+ * How does this work: http://developers.gigya.com/display/GD/Developer%27s+Guide
+ * Parameters: http://developers.gigya.com/display/GD/comments.getComments+JS
+ * One thing about the parameters, some website has hundreds or even thoughds of comments, but you need to click a button such as "More Comments" to see more comments, and the url has never changed. When you are using Gigya API, gave to set parameter "threadLimit", otherwise it cannot return all the comments.
 
 
 
