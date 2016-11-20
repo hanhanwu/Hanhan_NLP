@@ -129,6 +129,12 @@ NLP research and implementation
  * Scrapy documents: https://doc.scrapy.org/en/latest/
  * Pyhton yield: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
  
+* Python Scrapy Pipeline
+ * The Scrapy Pipeline aims to let you execute a series activities through a pipeline of process
+ * If you check Scrapy Pipeline document here, it's difficult to really get thing done: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+ * Here is my detailed readme about what did I try and worked: https://github.com/hanhanwu/Hanhan_NLP/blob/master/HanhanScrapt/Hanhan_Scrapy_Pipeline_ReadMe.md
+ * All my Scrapy Pipeline code: https://github.com/hanhanwu/Hanhan_NLP/tree/master/HanhanScrapt
+ 
 * Stanford Named Entity Recognizer (NER)
  * NER is able to regognize names of different things/people in English words
  * Download NER package: http://nlp.stanford.edu/software/CRF-NER.shtml#Download
