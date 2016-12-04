@@ -1,4 +1,3 @@
-# Get Comments and Reactions from new Globe and Mail HTML
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
