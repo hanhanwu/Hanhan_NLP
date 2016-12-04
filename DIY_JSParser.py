@@ -1,3 +1,4 @@
+# Get Comments and Reactions from new Globe and Mail HTML
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
@@ -13,9 +14,11 @@ def main():
         driver.get(comment_url)
         time.sleep(5)
         htmlSource = driver.page_source
-        soup = BeautifulSoup(htmlSource, 'html.parser')
-        authors = [p.find('span').get_text() for p in soup.findAll('p', {'class':'c29cjTJ'})]
-        print(authors)
+        clk = driver.find_element_by_css_selector('div.c3qHyJD')
+        clk.click()
+        reaction_counts = driver.find_elements_by_class_name('c2oytXt')
+        for rc in reaction_counts:
+            print(rc.text)
 
 if __name__ == "__main__":
     main()
