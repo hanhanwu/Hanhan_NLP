@@ -111,6 +111,7 @@ NLP research and implementation
  * <b> First of all</b>, install <b>Firebug!</b>(the name is really cool!) on your Firefox, it's an Addon. With Firebug, when you open the url in Firefox, click `HTML` in Firebug, you will see all the content. With Firebug search function, it's easy to locate and find the tags of the content you want to parse. Then, write code similar to mine, we can get the content.
  * <b>Then</b>, as you can see, in my code, I am using selenium library, it's super cool. It can get HTML page from JS written website, add, with `click()` method, you can click the chosen element. This is very imortant is because some elements such as reactions counts in my sample url will not appear until you click each reaction image.
  * selenium elements locating: http://selenium-python.readthedocs.io/locating-elements.html
+ * NOTE: selenium has get_element_* and get_elements_*, pay attention to this detail.
 
 
 
