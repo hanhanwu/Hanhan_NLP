@@ -109,7 +109,8 @@ NLP research and implementation
  * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JSParser.py
  * JS written website is not impossible for parsing without other API, we cannot see content from the source code, but we should be able to get the HTML content from the JS page.
  * <b> First of all</b>, install <b>Firebug!</b>(the name is really cool!) on your Firefox, it's an Addon. With Firebug, when you open the url in Firefox, click `HTML` in Firebug, you will see all the content. With Firebug search function, it's easy to locate and find the tags of the content you want to parse. Then, write code similar to mine, we can get the content.
- * <b>But</b>, so far my method is not perfect. If you check the sample url in my code from your broswer, and you want to see reactions count for each comment, you have click the reaction image, when there is a popup window appear, Firebug HTML will show the counts, otherwise, you cannot find them in the HTML. This means, when you are trying to do auto parsing, getting these counts may not be possible. I'm still trying to see whether this is possible.
+ * <b>Then</b>, as you can see, in my code, I am using selenium library, it's super cool. It can get HTML page from JS written website, add, with `click()` method, you can click the chosen element. This is very imortant is because some elements such as reactions counts in my sample url will not appear until you click each reaction image.
+ * selenium elements locating: http://selenium-python.readthedocs.io/locating-elements.html
 
 
 
