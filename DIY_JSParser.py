@@ -19,6 +19,7 @@ def main():
         reaction_counts = driver.find_elements_by_class_name('c2oytXt')
         for rc in reaction_counts:
             print(rc.text)
+        driver.close()   # close the browser
 
 if __name__ == "__main__":
     main()
