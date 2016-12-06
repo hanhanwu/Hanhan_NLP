@@ -106,12 +106,14 @@ NLP research and implementation
 
 * DIY JavaScript Parser
  * In above you will find Gigya works well to get the content from JS written website, however it doesn't work all the time. Recently, I just met a problem, that when Globe and Mail is updating their website, all the old comments have been hidden from the view, only new comments posted after Nov. 28, 2016 will appear with added new features. However, by using Gigya, I could get all the old comments, but no new comments, no new feature in the output data as well. After 2 days experiments, finally I somewhat realized why this happened, and at least I have found the basic solution to get the content data of this JS written website.
- * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JSParser.py
+ * <b>My code 1</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JSParser.py
  * JS written website is not impossible for parsing without other API, we cannot see content from the source code, but we should be able to get the HTML content from the JS page.
  * <b> First of all</b>, install <b>Firebug!</b>(the name is really cool!) on your Firefox, it's an Addon. With Firebug, when you open the url in Firefox, click `HTML` in Firebug, you will see all the content. With Firebug search function, it's easy to locate and find the tags of the content you want to parse. Then, write code similar to mine, we can get the content.
  * <b>Then</b>, as you can see, in my code, I am using selenium library, it's super cool. It can get HTML page from JS written website, add, with `click()` method, you can click the chosen element. This is very imortant is because some elements such as reactions counts in my sample url will not appear until you click each reaction image.
  * selenium elements locating: http://selenium-python.readthedocs.io/locating-elements.html
  * NOTE: selenium has get_element_* and get_elements_*, pay attention to this detail.
+ * <b>My code 2</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser2.py
+ * In my part 2 code, I was dealing with multiple clickable elements that have the same class name. When you clicked one, without closing it or scroll down, you cannot click another one. In this code, the code closed each popup, before clicking the next one.
 
 
 
