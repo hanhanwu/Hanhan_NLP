@@ -114,6 +114,7 @@ NLP research and implementation
  * NOTE: selenium has get_element_* and get_elements_*, pay attention to this detail.
  * <b>My code 2</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser2.py
  * In my part 2 code, I was dealing with multiple clickable elements that have the same class name. When you clicked one, without closing it or scroll down, you cannot click another one. In this code, the code closed each popup, before clicking the next one.
+ * Also in my code 2, I'm using this method `driver.execute_script("arguments[0].scrollIntoView();", clk)`, each time you need to interact with the next element, it will move to that position first. Otherwise you will get an error for not be able to see that (x,y) point, even if you maximize the browser.
 
 
 
