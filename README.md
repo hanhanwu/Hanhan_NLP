@@ -118,6 +118,14 @@ NLP research and implementation
  * Also in my code 2, I'm using this method `driver.execute_script("arguments[0].scrollIntoView();", clk)`, each time you need to interact with the next element, it will move to that position first. Otherwise you will get an error for not be able to see that (x,y) point, even if you maximize the browser.
 
 
+* How to get NationalPost comments
+ * Sample url "http://news.nationalpost.com/full-comment/marni-soupcoff-bob-dylans-nobel-silence-is-golden"
+ * I need to get the comments and I don't want to use its HTML data, looks simple, but no. Because this website embed everything in WordPress, however, traditional APIs cannot get the right comments data.
+ * Gigya got empty comments
+ * WordPress API: https://developer.wordpress.com/docs/api/
+ * WordPress API console: https://developer.wordpress.com/docs/api/console/
+ * But for each NationalPost article, both WordPress post and comment all point to the article, and the `$site` has to be the domain. `https://public-api.wordpress.com/rest/v1/sites/news.nationalpost.com/comments/307452/`, `https://public-api.wordpress.com/rest/v1/sites/news.nationalpost.com/posts/1282447/replies`, others could not help either.
+ 
 
 <b>Advanced NLP Tools</b>
 
