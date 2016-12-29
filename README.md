@@ -121,10 +121,19 @@ NLP research and implementation
 * How to get NationalPost comments
  * Sample url "http://news.nationalpost.com/full-comment/marni-soupcoff-bob-dylans-nobel-silence-is-golden"
  * I need to get the comments and I don't want to use its HTML data, looks simple, but no. Because this website embed everything in WordPress, however, traditional APIs cannot get the right comments data.
- * Gigya got empty comments
- * WordPress API: https://developer.wordpress.com/docs/api/
+ * <b>Gigya</b> got empty comments
+ * <b>WordPress API</b>: https://developer.wordpress.com/docs/api/
  * WordPress API console: https://developer.wordpress.com/docs/api/console/
  * But for each NationalPost article, both WordPress post and comment all point to the article, and the `$site` has to be the domain. `https://public-api.wordpress.com/rest/v1/sites/news.nationalpost.com/comments/307452/`, `https://public-api.wordpress.com/rest/v1/sites/news.nationalpost.com/posts/1282447/replies`, others could not help either.
+ * <b>PostMedia open source</b> is not useful either: https://github.com/Postmedia
+ * <b> Python Twill</b>: Python Twill does not work well for JavaScript. http://twill.idyll.org/,  http://twill.idyll.org/python-api.html
+ * <b> Zombie</b>: First of all, its Python API does not work for external url not built by me. So I had to try Zombie.js, it finally only returned me those only in web source code, still cannot get comments data. But a good learning experience.
+ * Zombie CoffeeScript Stackoverflow reference: http://stackoverflow.com/questions/11628636/i-cant-get-the-whole-source-code-of-an-html-page
+ * In order to use Zombie.js, I have checked: how to use node.js: http://www.dannemanne.com/posts/tutorial_get_started_with_node_js_on_mac_beginner_
+* In order to use Zombie.js, I have checked: coffeescript - TRY COFFEESCRIPT: http://coffeescript.org/
+* In order to use Zombie.js, I have checked: zombie.js: http://zombie.js.org/
+* In order to use Zombie.js, I have checked: zombie functions: http://zombie.readthedocs.io/en/latest/pythonzombie.html
+* In order to use Zombie.js, I have checked: CSS selector string: http://www.w3schools.com/jsref/met_document_queryselector.asp
  
 
 <b>Advanced NLP Tools</b>
