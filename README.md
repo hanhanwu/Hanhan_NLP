@@ -127,7 +127,7 @@ NLP research and implementation
  * But for each NationalPost article, both WordPress post and comment all point to the article, and the `$site` has to be the domain. `https://public-api.wordpress.com/rest/v1/sites/news.nationalpost.com/comments/307452/`, `https://public-api.wordpress.com/rest/v1/sites/news.nationalpost.com/posts/1282447/replies`, others could not help either.
  * <b>PostMedia open source</b> is not useful either: https://github.com/Postmedia
  * <b>Python Twill</b>: Python Twill does not work well for JavaScript. http://twill.idyll.org/,  http://twill.idyll.org/python-api.html
- * <b>Zombie</b>: First of all, its Python API does not work for external url not built by me. So I had to try Zombie.js, it finally only returned me those only in web source code, still cannot get comments data. But a good learning experience.
+ * <b>Zombie</b>: I tried Zombie first because it's browserless, which means when it is parsing the data, there is no browser popup. First of all, its Python API does not work for external url not built by me. So I had to try Zombie.js, it finally only returned me those only in web source code, still cannot get comments data. But a good learning experience.
  * Zombie CoffeeScript Stackoverflow reference: http://stackoverflow.com/questions/11628636/i-cant-get-the-whole-source-code-of-an-html-page
  * In order to use Zombie.js, I have checked: how to use node.js: http://www.dannemanne.com/posts/tutorial_get_started_with_node_js_on_mac_beginner_
 * In order to use Zombie.js, I have checked: coffeescript - TRY COFFEESCRIPT: http://coffeescript.org/
@@ -135,6 +135,7 @@ NLP research and implementation
 * In order to use Zombie.js, I have checked: zombie functions: http://zombie.readthedocs.io/en/latest/pythonzombie.html
 * In order to use Zombie.js, I have checked: CSS selector string: http://www.w3schools.com/jsref/met_document_queryselector.asp
 * <b>Mechanize</b>: It is built on python urllib2, therefore it cannot get the comments data which is not showing in web source code... But it is very convenient to get article title. http://wwwsearch.sourceforge.net/mechanize/
+* <b>Selenium</b>: Finally I got the comments by using selenium and firebug. They were my last choice because of the popup browsers, but, I have to admit, they are good to use.
  
 
 <b>Advanced NLP Tools</b>
