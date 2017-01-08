@@ -136,6 +136,8 @@ NLP research and implementation
 * In order to use Zombie.js, I have checked: CSS selector string: http://www.w3schools.com/jsref/met_document_queryselector.asp
 * <b>Mechanize</b>: It is built on python urllib2, therefore it cannot get the comments data which is not showing in web source code... But it is very convenient to get article title. http://wwwsearch.sourceforge.net/mechanize/
 * <b>Selenium</b>: Finally I got the comments by using selenium and firebug. They were my last choice because of the popup browsers, but, I have to admit, they are good to use.
+* My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/get_national_post_comments.py
+* In my code, I have learned that, when using XPath, `//iframe[@class='fb_ltr']` means this element ins directly under the root, if not, use `.//iframe[@class='fb_ltr']`
  
 
 <b>Advanced NLP Tools</b>
