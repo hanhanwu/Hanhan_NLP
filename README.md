@@ -176,6 +176,8 @@ NLP research and implementation
  * Download NER package: http://nlp.stanford.edu/software/CRF-NER.shtml#Download
  * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
 
+* Stanford CoreNLP: http://stanfordnlp.github.io/CoreNLP/
+
 * nltk Sentiment Analysis
  * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
  * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
