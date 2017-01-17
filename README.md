@@ -177,6 +177,7 @@ NLP research and implementation
  * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
 
 * Stanford CoreNLP: http://stanfordnlp.github.io/CoreNLP/
+* spaCy: https://spacy.io/
 
 * nltk Sentiment Analysis
  * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
