@@ -21,17 +21,23 @@ NLP research and implementation
  * https://cran.r-project.org/web/packages/HMM/HMM.pdf
 
 * <b>Author Recognition</b>
-* Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
+ * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
+ 
 
+*********************************************************************************************
 
 <b>LEARNING RESOURCES</b>
+
 * SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
 * SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
 * Deep Leanring Course with NLP: http://cs224d.stanford.edu/syllabus.html
 * Deep Learning in NLP & Speech/Audio: https://www.analyticsvidhya.com/blog/2016/08/deep-learning-path/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
+*********************************************************************************************
+
 <b>PRACTICE</b>
+
 * Keywords Search for Short Context
   * When the text context is very short, and you cannot build the search engine by simply calculating query terms distance, query terms frequency or query terms position. 
   * In the code here, I am trying different methods to allow better key words search for short context. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
@@ -53,17 +59,29 @@ NLP research and implementation
  * When running the code with Scrapy, use terminal command. cd to the top folder of your project, then type `scrapy runspider [spider file path]/[spider file name].py`
  * NOTE: this method does not work for all the web pages that needs login...
  
-* Looking for Alternatives for Google Search API
- * Google search API sets limitations per day, only could get 32 search reuslts each day
- * xgoogle, it has a pretty good tutorial, but google has blocked it, since Google doesn't allow automated search... http://www.catonmat.net/blog/python-library-for-google-search/
- * pygoogle is no longer available either, it recommends to use Google Custom Search
+ 
+*********************************************************************************************
+
+<b>RESAERCH AND DEVELOPMENT</b>
+
+* How to improve search accuracy with Google Search
+ * Simple video explains how google search works: https://www.youtube.com/watch?v=KyCYyoGusqs
+ * Operators used in google search query, looks helpful: https://support.google.com/websearch/answer/2466433?visit_id=1-636146162684675642-3633116773&rd=1
+
+
+<b>Auto Search APIs</b>
+
+* Google search API sets limitations per day, only could get 32 search reuslts each day
+* <b>xgoogle</b>, it has a pretty good tutorial, but google has blocked it, since Google doesn't allow automated search... http://www.catonmat.net/blog/python-library-for-google-search/
+* <b>pygoogle</b> is no longer available either, it recommends to use Google Custom Search
+* <b>YQL</b>
  * Yahoo YQL Guide: https://developer.yahoo.com/yql/guide/usage_info_limits.html
  * Yahoo Dev Center, to get the key and secret for YQL boss.search: https://developer.yahoo.com/apps/
  * yql open tables: https://github.com/hanhanwu/yql-tables
  * yql health checker, to check the current situations of yql open tables (I really like this feature, when you are clicking the tables here, it leads to YQL Console to allow you run the test query immediately): https://www.datatables.org/healthchecker/
  * <b>Example</b>, yql with Bing Web Search: https://developer.yahoo.com/yql/console/?env=store://datatables.org/alltableswithkeys&q=SELECT+*+FROM+microsoft.bing.web+WHERE+query%3D%27stackoverflow%27#h=SELECT+*+FROM+microsoft.bing.web+WHERE+query%3D'stackoverflow'
  * But, yql always returns empty results for my queries....
- 
+* <b>Bing</b>
  * Bing APIs: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api/documentation
  * Bing Search API Guide: https://msdn.microsoft.com/en-us/library/dn760781.aspx
  * In order to use Bing Search API, need to get the subscription key here: https://www.microsoft.com/cognitive-services/en-us/subscriptions
@@ -74,14 +92,7 @@ NLP research and implementation
  https://datamarket.azure.com/dataset/bing/search
  * It changes v2 to v5, and in order to get all those info, I need to purchase in Azure Market Place: https://msdn.microsoft.com/en-US/library/mt707570.aspx
  * Bing Web Search API Pricing: https://www.microsoft.com/cognitive-services/en-us/bing-web-search-api
- 
-
-* How to improve search accuracy with Google Search
- * Simple video explains how google search works: https://www.youtube.com/watch?v=KyCYyoGusqs
- * Operators used in google search query, looks helpful: https://support.google.com/websearch/answer/2466433?visit_id=1-636146162684675642-3633116773&rd=1
- 
- 
-* Google Custom Search Engine (CSE)
+* <b>Google Custom Search Engine (CSE)</b>
  * It's super easy and super cool! If you want to custom your own search engine, on your website
  * The tutorial provides all the useful and educational urls: https://developers.google.com/custom-search/docs/topical
  * The control panel is easy and fast to use, you can generate customized search engine within seconds, and google will create a web version as well as html code and tell you how to copy the code to html page: https://cse.google.com/cse/all
@@ -98,14 +109,14 @@ NLP research and implementation
  * Google CSE is great, cheaper than many other web search apis, even cheaper than Google Search API, and it's well documented. One thing need to note that google CSE didn't mention is their limitations per second. Bing Search API has 5 query limitation per second. I guess Google CSE also has limitation, therefore only using for loop to execute multiple queries will get errors. You can simply add `time.sleep(1)` in your for loop. Check my code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/multiple_query_google_cse.py
  
 
-* Gigya Javascript Web Parser
+<b>Java Script Parser</b>
+
+* <b>Gigya Javascript Web Parser</b>
  * One year ago, Amazon Camel-Camel-Camel suddenly changed its website source code and everything parsable has become Javascript, therefore I lost many data, and thought Javascript written website may not be parsable. Today, I just tried the Gigya API (the researchers I'm working with may have paid this API...), it will return all the content hidden behind the Javascript code!
  * How does this work: http://developers.gigya.com/display/GD/Developer%27s+Guide
  * Parameters: http://developers.gigya.com/display/GD/comments.getComments+JS
  * One thing about the parameters, some website has hundreds or even thoughds of comments, but you need to click a button such as "More Comments" to see more comments, and the url has never changed. When you are using Gigya API, gave to set parameter "threadLimit", otherwise it cannot return all the comments.
-
-
-* DIY JavaScript Parser
+* <b>DIY JavaScript Parser</b>
  * In above you will find Gigya works well to get the content from JS written website, however it doesn't work all the time. Recently, I just met a problem, that when Globe and Mail is updating their website, all the old comments have been hidden from the view, only new comments posted after Nov. 28, 2016 will appear with added new features. However, by using Gigya, I could get all the old comments, but no new comments, no new feature in the output data as well. After 2 days experiments, finally I somewhat realized why this happened, and at least I have found the basic solution to get the content data of this JS written website.
  * <b>My code 1</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JSParser.py
  * JS written website is not impossible for parsing without other API, we cannot see content from the source code, but we should be able to get the HTML content from the JS page.
@@ -118,7 +129,8 @@ NLP research and implementation
  * Also in my code 2, I'm using this method `driver.execute_script("arguments[0].scrollIntoView();", clk)`, each time you need to interact with the next element, it will move to that position first. Otherwise you will get an error for not be able to see that (x,y) point, even if you maximize the browser.
 
 
-* How to get NationalPost comments
+<b>How to get NationalPost Comments</b>
+
  * Sample url "http://news.nationalpost.com/full-comment/marni-soupcoff-bob-dylans-nobel-silence-is-golden"
  * I need to get the comments and I don't want to use its HTML data, looks simple, but no. Because this website embed everything in WordPress, however, traditional APIs cannot get the right comments data.
  * <b>Gigya</b> got empty comments
@@ -139,10 +151,67 @@ NLP research and implementation
 * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/get_national_post_comments.py
 * In my code, I have learned that, when using XPath, `//iframe[@class='fb_ltr']` means this element ins directly under the root, if not, use `.//iframe[@class='fb_ltr']`
  
+ 
+<b>Python Scrapy</b>
+ 
+* Scrapy Web Crawler
+ * Scrapy General: https://github.com/scrapy/scrapy
+ * Scrapy documents: https://doc.scrapy.org/en/latest/
+ * Pyhton yield: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
+* Scrapy Pipeline
+ * The Scrapy Pipeline aims to let you execute a series activities through a pipeline of process
+ * If you check Scrapy Pipeline document here, it's difficult to really get thing done: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+ * Here is my detailed readme about what did I try and worked: https://github.com/hanhanwu/Hanhan_NLP/blob/master/HanhanScrapt/Hanhan_Scrapy_Pipeline_ReadMe.md
+ * All my Scrapy Pipeline code: https://github.com/hanhanwu/Hanhan_NLP/tree/master/HanhanScrapt
+ 
 
-<b>Advanced NLP Tools</b>
+<b>Entity Recognizer</b>
+ 
+* Stanford Named Entity Recognizer (NER)
+ * NER is able to regognize names of different things/people in English words
+ * Download NER package: http://nlp.stanford.edu/software/CRF-NER.shtml#Download
+ * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
 
--- UW NLP TOOLS
+
+<b>Sentiment Analysis</b>
+
+* nltk Sentiment Analysis
+ * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
+ * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
+ * After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
+ * <b>Python 2.x only</b>
+ * My sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
+
+
+<b>NLP Tools Research</b>
+
+<b>Feature Extraction, for Clustering Use</b>
+
+* Stanford CoreNLP: http://stanfordnlp.github.io/CoreNLP/
+
+* Spacy
+ * https://spacy.io/
+ * Spacy GitHub: https://github.com/hanhanwu/spaCy
+ * Spack API Reference: https://spacy.io/docs/api/
+ * NLP Tutorials: https://spacy.io/docs/usage/tutorials
+ * Spacy Workflow: https://spacy.io/docs/usage/language-processing-pipeline
+ 
+* Tools built on Spacy (maybe they are even better)
+ * Overall: https://spacy.io/docs/usage/showcase
+ 
+* NLTK
+ * NLP basic operations go through: http://clarkgrubb.com/nlp
+
+* Methods used in Published Papers
+ * Threat Comments Detection (check their features selection): https://www.semanticscholar.org/paper/Threat-detection-in-online-discussions-Wester-%C3%98vrelid/f4150e2fb4d8646ebc2ea84f1a86afa1b593239b
+ 
+
+*********************************************************************************************
+
+<b>ADVEMCED NLP TOOLS/OPEN SOURCE</b>
+
+<b>UW NLP TOOLS</b>
+
 * Reverb  (works well on raw text)
  * About Reverb: https://github.com/hanhanwu/reverb
  * My code using reverb for extraction: https://github.com/hanhanwu/Hanhan_NLP/blob/master/reverb_extraction.py
@@ -160,43 +229,16 @@ NLP research and implementation
 
 * SFU Parser: https://github.com/sfu-natlang/glm-parser
 
-* Python Scrapy Web Crawler
- * Scrapy General: https://github.com/scrapy/scrapy
- * Scrapy documents: https://doc.scrapy.org/en/latest/
- * Pyhton yield: http://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
- 
-* Python Scrapy Pipeline
- * The Scrapy Pipeline aims to let you execute a series activities through a pipeline of process
- * If you check Scrapy Pipeline document here, it's difficult to really get thing done: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
- * Here is my detailed readme about what did I try and worked: https://github.com/hanhanwu/Hanhan_NLP/blob/master/HanhanScrapt/Hanhan_Scrapy_Pipeline_ReadMe.md
- * All my Scrapy Pipeline code: https://github.com/hanhanwu/Hanhan_NLP/tree/master/HanhanScrapt
- 
-* Stanford Named Entity Recognizer (NER)
- * NER is able to regognize names of different things/people in English words
- * Download NER package: http://nlp.stanford.edu/software/CRF-NER.shtml#Download
- * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
-
-* Stanford CoreNLP: http://stanfordnlp.github.io/CoreNLP/
-* spaCy: https://spacy.io/
-
-* nltk Sentiment Analysis
- * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
- * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
- * After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
- * <b>Python 2.x only</b>
- * My sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
-
 * Crowd Sourcing for Sentiment Analysis
  * CrowdFlower: https://www.crowdflower.com/use-case/sentiment-analysis/
 
+* R/Python TEXT MINING PACKAGE
+ * R text mining basics: https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html
+ * Helpful resource - sorting R matrix: https://www.r-bloggers.com/sorting-rows-and-colums-in-a-matrix-with-some-music-and-some-magic/
+ * More about LDA with Python code (still for beginners): https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
--- R TEXT MINING PACKAGE
-* R text mining basics: 
-* Helpful resource - sorting R matrix: https://www.r-bloggers.com/sorting-rows-and-colums-in-a-matrix-with-some-music-and-some-magic/
-* More about LDA with Python code (still for beginners): https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
-
--- My NLP Presentation
+<b>My NLP Presentation</b>
 * 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Hanhan_NLP_Presentation.pdf
 
 
