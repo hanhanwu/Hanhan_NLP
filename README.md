@@ -198,6 +198,7 @@ NLP research and implementation
  
 * Tools built on Spacy (maybe they are even better)
  * Overall: https://spacy.io/docs/usage/showcase
+ * Textacy Detailed Tutorial: https://media.readthedocs.org/pdf/textacy/latest/textacy.pdf
  
 * NLTK
  * NLP basic operations go through: http://clarkgrubb.com/nlp
