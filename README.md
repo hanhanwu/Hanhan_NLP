@@ -198,7 +198,11 @@ NLP research and implementation
  
 * Tools built on Spacy (maybe they are even better)
  * Overall: https://spacy.io/docs/usage/showcase
- * Textacy Detailed Tutorial: https://media.readthedocs.org/pdf/textacy/latest/textacy.pdf
+* <b>Textacy</b>
+ * Textacy Document: https://media.readthedocs.org/pdf/textacy/latest/textacy.pdf
+ * [Text Preprocessing][1]: Their preprocessing choices are very rich, removing emails, remove urls, fix unicode, deal with Egnlish contractions and so on. Meanwhile, if you ues `textacy.preprocess.preprocess_text()`, you can choose which choices to use, very flexible.
+ * [Extract][2]: They are using Part-of-speech tagging as Spacy dose. The part-of-speech tagger uses the OntoNotes 5 version of the Penn Treebank tag set. We also map the tags to the simpler Google Universal POS tag set. 
+ * [My textacy explore code][3]
  
 * NLTK
  * NLP basic operations go through: http://clarkgrubb.com/nlp
@@ -245,3 +249,8 @@ NLP research and implementation
 
 <b>INSPIRING, when I think NLP is very boring</b>
 * IBM Watson competes in Jeopardy: https://www.youtube.com/watch?v=lI-M7O_bRNg
+
+
+[1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
+[2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
+[3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
