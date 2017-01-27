@@ -206,6 +206,9 @@ NLP research and implementation
  
 * NLTK
  * NLP basic operations go through: http://clarkgrubb.com/nlp
+ 
+* Other Methods
+ * Text Feature Extraction in Python (the data preprocessing methods here are too basic, however, it's very interesting to learn there is `tf-isf`, now I's thinking, how did they get Cue Words?): https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 * Methods used in Published Papers
  * Threat Comments Detection (check their features selection): https://www.semanticscholar.org/paper/Threat-detection-in-online-discussions-Wester-%C3%98vrelid/f4150e2fb4d8646ebc2ea84f1a86afa1b593239b
