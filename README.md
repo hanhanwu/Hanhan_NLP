@@ -208,7 +208,7 @@ NLP research and implementation
  * NLP basic operations go through: http://clarkgrubb.com/nlp
  
 * Other Methods
- * Text Feature Extraction in Python (the data preprocessing methods here are too basic, however, it's very interesting to learn there is `tf-isf`, now I's thinking, how did they get Cue Words?): https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+ * [Feature Summary with Python][4] (the data preprocessing methods here are too basic, however, it's very interesting to learn there is `tf-isf`, and now I'm thinking, how did they get Cue Words?)
 
 * Methods used in Published Papers
  * Threat Comments Detection (check their features selection): https://www.semanticscholar.org/paper/Threat-detection-in-online-discussions-Wester-%C3%98vrelid/f4150e2fb4d8646ebc2ea84f1a86afa1b593239b
@@ -257,3 +257,4 @@ NLP research and implementation
 [1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
 [2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
 [3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
+[4]:https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
