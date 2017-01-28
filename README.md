@@ -208,7 +208,7 @@ NLP research and implementation
  * NLP basic operations go through: http://clarkgrubb.com/nlp
  
 * Other Methods
- * [Feature Summary with Python][4] (the data preprocessing methods here are too basic, however, it's very interesting to learn there is `tf-isf`, and now I'm thinking, how did they get Cue Words?)
+ * [Feature Summary with Python][4] (the data preprocessing methods here are too basic, however, it's very interesting to learn there is `tf-isf` and see the way they calculate it. The only pity is, they got Cue Words manually...)
 
 * Methods used in Published Papers
  * Threat Comments Detection (check their features selection): https://www.semanticscholar.org/paper/Threat-detection-in-online-discussions-Wester-%C3%98vrelid/f4150e2fb4d8646ebc2ea84f1a86afa1b593239b
