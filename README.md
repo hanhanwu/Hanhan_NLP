@@ -218,6 +218,8 @@ NLP research and implementation
 
 <b>ADVEMCED NLP TOOLS/OPEN SOURCE</b>
 
+<b>Format JSON Output</b>, when you don't have notepad++: http://jsonviewer.stack.hu/
+
 <b>UW NLP TOOLS</b>
 
 * Reverb  (works well on raw text)
