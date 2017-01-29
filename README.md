@@ -116,7 +116,7 @@ NLP research and implementation
  * How does this work: http://developers.gigya.com/display/GD/Developer%27s+Guide
  * Parameters: http://developers.gigya.com/display/GD/comments.getComments+JS
  * One thing about the parameters, some website has hundreds or even thoughds of comments, but you need to click a button such as "More Comments" to see more comments, and the url has never changed. When you are using Gigya API, gave to set parameter "threadLimit", otherwise it cannot return all the comments.
-* <b>DIY JavaScript Parser</b>
+* <b>DIY JavaScript Parser - with selenium</b>
  * In above you will find Gigya works well to get the content from JS written website, however it doesn't work all the time. Recently, I just met a problem, that when Globe and Mail is updating their website, all the old comments have been hidden from the view, only new comments posted after Nov. 28, 2016 will appear with added new features. However, by using Gigya, I could get all the old comments, but no new comments, no new feature in the output data as well. After 2 days experiments, finally I somewhat realized why this happened, and at least I have found the basic solution to get the content data of this JS written website.
  * <b>My code 1</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JSParser.py
  * JS written website is not impossible for parsing without other API, we cannot see content from the source code, but we should be able to get the HTML content from the JS page.
@@ -127,6 +127,8 @@ NLP research and implementation
  * <b>My code 2</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser2.py
  * In my part 2 code, I was dealing with multiple clickable elements that have the same class name. When you clicked one, without closing it or scroll down, you cannot click another one. In this code, the code closed each popup, before clicking the next one.
  * Also in my code 2, I'm using this method `driver.execute_script("arguments[0].scrollIntoView();", clk)`, each time you need to interact with the next element, it will move to that position first. Otherwise you will get an error for not be able to see that (x,y) point, even if you maximize the browser.
+ * <b>My code 3 (TO BE CONTINUED...)</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser3.py
+ * In my code 3, I have created the main comment and replies hierarchical structure, majorly by using the difference between the very first parents' class name of main comment and its replies are different
 
 
 <b>How to get NationalPost Comments</b>
