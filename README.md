@@ -127,8 +127,8 @@ NLP research and implementation
  * <b>My code 2</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser2.py
  * In my part 2 code, I was dealing with multiple clickable elements that have the same class name. When you clicked one, without closing it or scroll down, you cannot click another one. In this code, the code closed each popup, before clicking the next one.
  * Also in my code 2, I'm using this method `driver.execute_script("arguments[0].scrollIntoView();", clk)`, each time you need to interact with the next element, it will move to that position first. Otherwise you will get an error for not be able to see that (x,y) point, even if you maximize the browser.
- * <b>My code 3 (TO BE CONTINUED...)</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser3.py
- * In my code 3, I have created the main comment and replies hierarchical structure, majorly by using the difference between the very first parents' class name of main comment and its replies are different
+ * <b>Getting parents web element</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser_get_parents.py
+ * <b>My code 3 (redesigning the code)</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser3.py
 
 
 <b>How to get NationalPost Comments</b>
