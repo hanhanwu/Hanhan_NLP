@@ -59,6 +59,24 @@ NLP research and implementation
  * When running the code with Scrapy, use terminal command. cd to the top folder of your project, then type `scrapy runspider [spider file path]/[spider file name].py`
  * NOTE: this method does not work for all the web pages that needs login...
  
+* Scikit_Learn NLP Go Through
+ * Text Matching - Distance Matching, Phonetic Matching, Flexible String Matching, Cosine Similarity 
+ * In Distance Matching, besides Levenshtein Distance, there are other distance methods: [Jaro Distance][5], [Hammig Distance][6]
+ * For Phonetic Matching, python Fuzzy contains Soundex, DMetaphone and nysiis. It seems that when it comes to similar pronuncation but different spelling, DMetaphone works better. But if you care about both spelling and pronouncation differences, Soundex and nysiis maybe better
+ * Flexible String Matching, I will try regular expression, lemmatized matching (StanfordNLP), compact matching (python fuzzyfinder)
+ * Cosine Similarity, when the text is represented as vector notation, a general cosine similarity can also be applied in order to measure vectorized similarity. <b>It seems that this method works very well when the words in 2 strings are not in the same order</b>, if we use Levenshtein Distance, it cares about words order and will output larger distance.
+ * <b>Coreference Resolution</b> is a process of finding relational links among the words (or phrases) within the sentences. it automatically figures out what does "he", "it" mean in the sentences. [Standford NLP Coreference Resolution][7], [Standford NLP Python][8] 
+ * [Reference][9]
+ * [my code][10]
+ 
+ 
+[5]:https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance
+[6]:https://en.wikipedia.org/wiki/Hamming_distance
+[7]:http://nlp.stanford.edu/software/dcoref.shtml
+[8]:https://github.com/Wordseer/stanford-corenlp-python
+[9]:https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+[10]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP%20with%20Scikit%20Learn.ipynb
+
  
 *********************************************************************************************
 
