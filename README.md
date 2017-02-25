@@ -234,6 +234,16 @@ NLP research and implementation
  * Threat Comments Detection (check their features selection): https://www.semanticscholar.org/paper/Threat-detection-in-online-discussions-Wester-%C3%98vrelid/f4150e2fb4d8646ebc2ea84f1a86afa1b593239b
  
 
+<b>Python Gensim</b> - Topic Modeling
+ * https://github.com/hanhanwu/gensim
+ 
+<b>Pyhthon Pattern</b> - NLP and Machine Learning
+* https://github.com/hanhanwu/pattern
+
+<b>Python TextBlob</b> - NLP, built upon NLTK and Pattern
+* https://github.com/hanhanwu/TextBlob
+
+
 *********************************************************************************************
 
 <b>ADVEMCED NLP TOOLS/OPEN SOURCE</b>
@@ -268,12 +278,10 @@ NLP research and implementation
  * More about LDA with Python code (still for beginners): https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
+*********************************************************************************************
+
 <b>My NLP Presentation</b>
 * 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Hanhan_NLP_Presentation.pdf
-
-
-<b>INSPIRING, when I think NLP is very boring</b>
-* IBM Watson competes in Jeopardy: https://www.youtube.com/watch?v=lI-M7O_bRNg
 
 
 [1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
