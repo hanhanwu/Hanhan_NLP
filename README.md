@@ -148,6 +148,7 @@ NLP research and implementation
  * <b>Getting parents web element</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser_get_parents.py
  * <b>My code 3</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/DIY_JS_Parser3.py
  * My code 3 has finished a complex process, that is to extract hierarchical data and recover them back to the original hierarchial structure. If you copy the url to firefox and have firebug on it, you will find for each main comment author, the class name is "c29cjTJ", the replied author of each main comment has class name "c29cjTJ c3fk6Wf". In fact "c29cjTJ c3fk6Wf" is a compact class, you cannot find the element through this class name, but you can find the element through `driver.find_element_by_css_selector(".c29cjTJ.c3fk6Wf")`. However, there is a even simpler way, that is what I wrote in my code 3, you use `driver.find_element_by_class_name("c29cjTJ")`, it will include all the authors for main comment and replies. Later, just try to trace back to find the root class id to decide which reply belongs to which main comment.
+ * NOTE: In some machines, it may require `geckodriver`, and sometimes, adding its path into $PATH doesn't work, so in your code, instead of using `driver = webdriver.Firefox()`, you should use `driver = webdriver.Firefox(executable_path='[your path]/geckodriver')`
 
 
 <b>How to get NationalPost Comments</b>
