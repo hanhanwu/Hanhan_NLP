@@ -1,4 +1,4 @@
-# put replies under main comments
+# put replies under their main comments
 
 # Get Comment, Reactions, Reaction Counts
 # For each comment url, a browser will be opened and the reaction buttion will be clicked.
@@ -6,8 +6,9 @@
 from selenium import webdriver
 import time
 import re
-from pprint import pprint
+import collections
 import json
+import unidecode
 
 image_reaction_map = {
                        "B9CMO5aR": 'funny',
@@ -37,26 +38,58 @@ def main():
         article_id = re.match(article_id_ptn, comment_url).group(1)
         driver = webdriver.Firefox()
         driver.get(comment_url)
+        all_dct = {}
         time.sleep(5)
 
-        # TEST #
-        test_ca = driver.find_element_by_class_name("c29cjTJ")
-        p = test_ca.find_element_by_xpath('../../../..').get_attribute("class")
-        print(test_ca.text, p)
-        if p.strip() == "c2LlVA7":
-            print('yes')
-        driver.close()
-        # TEST #
+        # authors
+        comment_authors = driver.find_elements_by_class_name("c29cjTJ")
+        for comment_author in comment_authors:
+            rp = comment_author.find_element_by_xpath('../../../../..')
+            p = comment_author.find_element_by_xpath('../../../..')
+            rp_class = rp.get_attribute("class")
+            rp_id = rp.get_attribute("data-reactid")
+            p_class = p.get_attribute("class")
+            p_id = p.get_attribute("data-reactid")
+            ca_key = "_".join([rp_class, rp_id, p_class, p_id])
+            all_dct.setdefault(ca_key, {"author": comment_author.text, "post_time": "", "comment_text":"", "reactions":None})
 
-        comment_autors = [ca.text for ca in driver.find_elements_by_class_name("c29cjTJ")]
-        post_time = [pt.text for pt in driver.find_elements_by_class_name("cNCPihY")]
-        comment_text = [cmt.text for cmt in driver.find_elements_by_class_name("c1bE414")]
-        comments_reactions = []
+        # post time
+        post_times = driver.find_elements_by_class_name("cNCPihY")
+        for post_time in post_times:
+            rp = post_time.find_element_by_xpath('../../../../..')
+            p = post_time.find_element_by_xpath('../../../..')
+            rp_class = rp.get_attribute("class")
+            rp_id = rp.get_attribute("data-reactid")
+            p_class = p.get_attribute("class")
+            p_id = p.get_attribute("data-reactid")
+            pt_key = "_".join([rp_class, rp_id, p_class, p_id])
+            all_dct[pt_key]["post_time"] = post_time.text
 
+        # comment_text
+        comment_text_lst = driver.find_elements_by_class_name("c1bE414")
+        for comment_text in comment_text_lst:
+            rp = comment_text.find_element_by_xpath('../../../../..')
+            p = comment_text.find_element_by_xpath('../../../..')
+            rp_class = rp.get_attribute("class")
+            rp_id = rp.get_attribute("data-reactid")
+            p_class = p.get_attribute("class")
+            p_id = p.get_attribute("data-reactid")
+            ct_key = "_".join([rp_class, rp_id, p_class, p_id])
+            all_dct[ct_key]["comment_text"] = unidecode.unidecode(comment_text.text.replace("\n", "").replace("\"", "'"))
+
+        # click
         clicks= driver.find_elements_by_css_selector('div.c2iexvC')
-        for clk in clicks:
-            driver.execute_script("arguments[0].scrollIntoView();", clk)
-            clk.click()
+        for click in clicks:
+            rp = click.find_element_by_xpath('../../../../../..')
+            p = click.find_element_by_xpath('../../../../..')
+            rp_class = rp.get_attribute("class")
+            rp_id = rp.get_attribute("data-reactid")
+            p_class = p.get_attribute("class")
+            p_id = p.get_attribute("data-reactid")
+            click_key = "_".join([rp_class, rp_id, p_class, p_id])
+
+            driver.execute_script("arguments[0].scrollIntoView();", click)
+            click.click()
 
             reaction_counts = [rc.text for rc in driver.find_elements_by_class_name('c2oytXt')]
             reaction_users = [ru.text for ru in driver.find_elements_by_class_name('c3TwkwL')]
@@ -68,29 +101,33 @@ def main():
             for i in range(len(reaction_users)):
                 reaction_lst.append({'reaction_user':reaction_users[i], 'reaction_time':reaction_time[i], 'reaction':reactions[i]})
 
-            comments_reactions.append({'reaction_counts':reaction_counts, 'reactions':reaction_lst})
+            all_dct[click_key]["reactions"] = collections.OrderedDict({'reaction_counts':reaction_counts, 'reaction_list':reaction_lst})
 
             close_clk = driver.find_element_by_class_name("c1KbZcP")
             close_clk.click()
 
         driver.close()
 
+        hierarchical_dct = {}
+        for k,v in all_dct.items():
+            if "c2LlVA7 c1EuLzy" not in k: # main comment
+                hierarchical_dct.setdefault(k.split('_c2LlVA7_')[0], {
+                                                                        "author":v['author'],
+                                                                        "post_time":v['post_time'],
+                                                                        "comment_text":v['comment_text'],
+                                                                        "reactions":v['reactions'],
+                                                                        "replies":{}
+                                                                     })
+
+        for k, v in all_dct.items():
+            if "c2LlVA7 c1EuLzy" in k:
+                main_comment_key = k.split('_c2LlVA7 c1EuLzy_')[0]
+                hierarchical_dct[main_comment_key]['replies'][k] = collections.OrderedDict(v)
 
 
-        for i in range(len(comment_autors) - len(comments_reactions)):
-            comments_reactions.append({'reaction_counts':0, 'reactions':[]})
-
-        comments = []
-        for idx in range(len(comment_autors)):
-            comments.append({'comment_id':idx, 'comment_author':comment_autors[idx],
-                             'comment_time':post_time[idx], 'comment':comment_text[idx],
-                             'reaction_list':comments_reactions[idx]
-                             })
-        output = {article_id:{'comments':comments}}
-        f_name = r'../../output/Comment_Reactions/article'+article_id+'_comment_reaction.json'
-        with open(f_name, 'wt') as out:
-            json.dump(output, out)
-            # pprint(output, stream=out)
+        f_name = r'../../output/Comment_Reactions/article_' + article_id + '_comments.json'
+        with open(f_name, 'w') as out:
+            json.dump(collections.OrderedDict(hierarchical_dct), out)
 
 if __name__ == "__main__":
     main()
