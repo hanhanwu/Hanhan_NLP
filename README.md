@@ -5,6 +5,9 @@ NLP research and implementation
 
 <b>RESEARCH PAPERS</b>
 
+* <b>Computational Linguistics</b> - MIT Press: http://www.mitpressjournals.org/loi/coli
+
+
 * <b>Analysis of Collaborative Writing Processes Using Hidden Markov Models and Semantic Heuristics</b>
 * It analysis the PROCESS of collaborative writing and predict writing performance
 * Inspiration
