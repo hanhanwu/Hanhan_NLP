@@ -7,6 +7,7 @@ NLP research and implementation
 
 * <b>Computational Linguistics</b> - MIT Press: http://www.mitpressjournals.org/loi/coli
 
+* <b>SO-CAL in NLP</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Taboada_etal_SO-CAL.pdf
 
 * <b>Analysis of Collaborative Writing Processes Using Hidden Markov Models and Semantic Heuristics</b>
 * It analysis the PROCESS of collaborative writing and predict writing performance
