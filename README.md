@@ -257,6 +257,9 @@ NLP research and implementation
 <b>ADVEMCED NLP TOOLS/OPEN SOURCE</b>
 
 <b>Format JSON Output</b>, when you don't have notepad++: http://jsonviewer.stack.hu/
+<b>WebAnno - Web Annotation</b>: https://webanno.github.io/webanno/
+<b>WebAnno source code</b>, more about web development: https://github.com/webanno/webanno
+
 
 <b>UW NLP TOOLS</b>
 
