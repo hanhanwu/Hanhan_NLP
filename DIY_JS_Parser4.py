@@ -38,11 +38,11 @@ def main():
 
 
     for comment_url in comment_urls:
+        driver = webdriver.Firefox()
+        # driver = webdriver.Firefox(executable_path='/Users/devadmin/Documents/geckodriver')
+        driver.get(comment_url)
         try:
             article_id = re.match(article_id_ptn, comment_url).group(1)
-            driver = webdriver.Firefox()
-            # driver = webdriver.Firefox(executable_path='/Users/devadmin/Documents/geckodriver')
-            driver.get(comment_url)
             all_dct = {}
             time.sleep(5)
 
@@ -82,11 +82,13 @@ def main():
                         author_count += 1
                     except:
                         author_count += 1
+                        pass
                     try:
                         comment_post_time = comment.find_element_by_class_name("cNCPihY").text
                         post_time_count += 1
                     except:
                         post_time_count += 1
+                        pass
                     try:
                         in_reply_to = unidecode.unidecode(comment.find_element_by_class_name("cxpl-23").text
                                                        .replace("\n", "").replace("\"", "'")).replace("\"", "'")
@@ -103,6 +105,7 @@ def main():
                         text_count += 1
                     except:
                         text_count += 1
+                        pass
 
                     try:
                         reactions_click = comment.find_element_by_class_name("c2iexvC")
@@ -126,6 +129,7 @@ def main():
                         close_clk.click()
                     except:
                         reaction_count += 1
+                        pass
 
                     if is_first == 1:
                         all_dct[whole_comment_key]["author"] = comment_author
@@ -142,7 +146,7 @@ def main():
                     with open(error_comment_reactions, 'a') as error_output:
                          error_output.write("counts not match: (" + author_count + ", " + post_time_count + ", " + \
                                             text_count + ", " + reaction_count + ")" + comment_url + "\n")
-                    driver.close()
+                    driver.quit()
                     return
 
             if len(all_dct) == 0:
@@ -154,13 +158,13 @@ def main():
                 with open(f_name, 'w') as out:
                     json.dump(collections.OrderedDict(all_dct), out)
 
-            driver.close()
+            driver.quit()
 
         except:
             print(sys)
             with open(error_comment_reactions, 'a') as error_output:
                 error_output.write(comment_url+"\n")
-            driver.close()
+            driver.quit()
 
 
 if __name__ == "__main__":
