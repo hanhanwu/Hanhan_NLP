@@ -36,15 +36,18 @@ def main():
             comment_urls.append(r.replace("\n", "")+"comments/")
     article_id_ptn = "http://www.theglobeandmail.com/.*?/article(\d+)/comments"
 
-
     for comment_url in comment_urls:
         driver = webdriver.Firefox()
         # driver = webdriver.Firefox(executable_path='/Users/devadmin/Documents/geckodriver')
         driver.get(comment_url)
+        if driver_session_id == None:
+            with open(error_comment_reactions, 'a') as error_output:
+                error_output.write(comment_url+"\n")
+            driver.quit()
+        time.sleep(5)
         try:
             article_id = re.match(article_id_ptn, comment_url).group(1)
             all_dct = {}
-            time.sleep(5)
 
             show_more_click = ""
             while(show_more_click != None):
