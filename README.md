@@ -204,6 +204,8 @@ NLP research and implementation
 
 <b>Sentiment Analysis</b>
 
+* Resources: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/resources.md
+
 * nltk Sentiment Analysis
  * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
  * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
