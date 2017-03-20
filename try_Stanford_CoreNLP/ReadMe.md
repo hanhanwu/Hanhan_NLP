@@ -40,9 +40,11 @@ timeout is in milliseconds, here we set it to 10 sec above. You should increase 
 TEXT PREPROCESSING
 
 * [Annotators][8]
+* [simple parsing example][9] - in this very simple example, it does tokenize, sentence spliting and POS parsing. You can have more choices by changing the values in `annotators`, check which annotators the library has through the above url
 
 
 [8]:http://stanfordnlp.github.io/CoreNLP/annotators.html
+[9]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/simple_parsing_example.py
 
 
 *****************************************************************************
