@@ -26,21 +26,23 @@ HOW TO INSTALL STANFORD CORE NLP
 4. `java -mx5g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 10000`, this will start the server.
 timeout is in milliseconds, here we set it to 10 sec above. You should increase it if you pass huge blobs to the server.
 5. `pip3 install pycorenlp`
-6. [For an example code to test your setup][6]
+6. [pycorenlp][7]
+7. [For an example code to test your setup][6]
 
 
 [5]:http://stanfordnlp.github.io/CoreNLP/
 [6]:http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
+[7]:https://github.com/smilli/py-corenlp
 
 
 *****************************************************************************
 
 TEXT PREPROCESSING
 
-* [Annotators][5]
+* [Annotators][8]
 
 
-[7]:http://stanfordnlp.github.io/CoreNLP/annotators.html
+[8]:http://stanfordnlp.github.io/CoreNLP/annotators.html
 
 
 *****************************************************************************
