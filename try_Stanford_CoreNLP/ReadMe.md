@@ -28,11 +28,13 @@ timeout is in milliseconds, here we set it to 10 sec above. You should increase 
 5. `pip3 install pycorenlp`
 6. [pycorenlp][7]
 7. [For an example code to test your setup][6]
+8. [CoreNLP Server, quick start][10]
 
 
 [5]:http://stanfordnlp.github.io/CoreNLP/
 [6]:http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
 [7]:https://github.com/smilli/py-corenlp
+[10]:http://stanfordnlp.github.io/CoreNLP/corenlp-server.html
 
 
 *****************************************************************************
