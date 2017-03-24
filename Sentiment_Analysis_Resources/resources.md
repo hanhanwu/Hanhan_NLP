@@ -6,8 +6,9 @@
 
 Abusive Language Detection
 
-* Detect online abusive: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/online_abusive.pdf
+* Detect online abusive [2016]: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/online_abusive.pdf
   * I guess, here they calculate both Agreement Rate and Fleiss's Kappa is to tell how much is shown to be agreed by all, and how much agreement among those should not be by chance
   * hatebase dataset: https://www.hatebase.org/
-* Personal Attacks: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/Personal_Attacks.pdf
-  * I think the interesting thing in this paper are those data analysis at the end
+* Personal Attacks [2017]: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/Personal_Attacks.pdf
+  * I think the interesting thing in this paper are those data analysis at the end, talking about findings for their questions. Their machine learning part looks creative, they compared their model with "emsemble annotators", but their model gives continuous output (although later they set threshold), human beings are not good at annotating continuous values, so the comparisons are not fair to human beings; however if let these annotators annotate binary labels, not fair to their models. This makes me feel, when it comes to evaluating a model, maybe we should compare it with other models?
+* In general, after reading the above 2 papers, I feel doing large scale sentiment analysis is challenging, because human experts define the meaning of lables (such as "abusive", "toxic") are different, and maybe in different context (such as Wiki data or Facebook data) the definition could also vary? How could researchers in sentiment analysis area find really reliable scientific method to prove their theories?
