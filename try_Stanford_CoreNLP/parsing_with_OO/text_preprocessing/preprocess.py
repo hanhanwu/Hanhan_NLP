@@ -52,7 +52,7 @@ class Preprocess():
                 preprocessed_out.write(r + "\n")
 
 
-    def pos_parsing(self):
+    def pos_tagging(self):
         if self.input_type == "file":
             input_path_elems = self.input.split("/")
             file_name = ""
@@ -82,7 +82,7 @@ class Preprocess():
 
 def main(argv):
     p = Preprocess(argv)
-    p.pos_parsing()
+    p.pos_tagging()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
