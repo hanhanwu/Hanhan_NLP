@@ -46,12 +46,15 @@ TEXT PREPROCESSING
 * Sometimes, people hope to use what you have created and give them enough flexibility to modify your code, therefore, you have to use some OO design. [Here is an example][11] - you type command line and indicate your input & output, it will do sentence split, tokenization and POS parsing for you.
 * [.sh file here][12] is where you put your command line input. Your input can be a file or a folder full of files; output has to be a folder.
 * Each time when you want to run the code, just `cd` to you folder where you put this .sh file, then type in your terminal `sh run_source_code.sh`. Makes life easier, isn't it?
+* As you can see in OO design example, there are 2 versions preprocess code, [version 1][14] and [version 2][13]. I have made some changes in version 2, so that it is more robust if someone else want to use or modify the code.
 
 
 [8]:http://stanfordnlp.github.io/CoreNLP/annotators.html
 [9]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/simple_parsing_example.py
 [11]:https://github.com/hanhanwu/Hanhan_NLP/tree/master/try_Stanford_CoreNLP/parsing_with_OO
 [12]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/run_source_code.sh
+[13]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess2.py
+[14]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess.py
 
 
 *****************************************************************************
