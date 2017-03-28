@@ -42,6 +42,7 @@ timeout is in milliseconds, here we set it to 10 sec above. You should increase 
 TEXT PREPROCESSING
 
 * [Annotators][8]
+* The most simple way to run CoreNLP is through command line, `java -cp "*" -Xmx2g edu.stanford.nlp.pipeline.StanfordCoreNLP -annotators tokenize,ssplit,pos,lemma,ner,parse,dcoref -file input.txt -outputDirectory your_output_folder`, here `-file` supports folder input
 * [simple parsing example][9] - in this very simple example, it does tokenize, sentence spliting and POS parsing. You can have more choices by changing the values in `annotators`, check which annotators the library has through the above url
 * Sometimes, people hope to use what you have created and give them enough flexibility to modify your code, therefore, you have to use some OO design. [Here is an example][11] - you type command line and indicate your input & output, it will do sentence split, tokenization and POS parsing for you.
 * [.sh file here][12] is where you put your command line input. Your input can be a file or a folder full of files; output has to be a folder.
