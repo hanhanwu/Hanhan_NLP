@@ -1,6 +1,7 @@
 import os
 import argparse
 from pycorenlp import StanfordCoreNLP
+import unidecode
 
 
 class Preprocess():
@@ -36,6 +37,8 @@ class Preprocess():
 
         self.input = os.path.abspath(args.input_path)
         self.output_folder = os.path.abspath(args.output_path)       # output has to be a folder
+        if not os.path.exists(self.output_folder):
+            os.makedirs(self.output_folder)
         self.log_path = os.path.abspath(args.log_path)               # log path is optional
         self.standford_annotators = args.annotators
         if os.path.isdir(self.input) == True: self.input_type = "dir"
@@ -76,7 +79,7 @@ class Preprocess():
         output_file_path = self.output_folder + '/' + file_name
         with open(output_file_path, 'a') as preprocessed_out:
             for r in rows:
-                preprocessed_out.write(r + "\n")
+                preprocessed_out.write(unidecode.unidecode(r) + "\n")
 
 
     def pos_tagging(self):
