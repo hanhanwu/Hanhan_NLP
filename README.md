@@ -207,11 +207,15 @@ NLP research and implementation
 * Resources: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/resources.md
 
 * nltk Sentiment Analysis
- * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
- * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
- * After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
- * <b>Python 2.x only</b>
- * My sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
+  * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
+  * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
+  * After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
+  * <b>Python 2.x only</b>
+  * My nltk sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
+
+* R Sentiment Analysis
+  * Reference - Sentiment analysis on movie and tweet: https://www.analyticsvidhya.com/blog/2017/03/measuring-audience-sentiments-about-movies-using-twitter-and-text-analytics/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * I don't like the word cloud used in the above tutorial. The last methoed with has NRC sentiment dictionary is new to me, worthy to try it. But this tutorial suddenly makes me think, if people are talking about sad movies, although they like the movie but their comments are filled with negative words... How accurate sentiment analysis could be? I think maybe, at least put sentiment analysis and the words location together to measure?
 
 
 <b>NLP Tools Research</b>
