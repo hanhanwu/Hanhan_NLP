@@ -265,9 +265,10 @@ NLP research and implementation
 
 <b>Format JSON Output</b>, when you don't have notepad++: http://jsonviewer.stack.hu/
 
-<b>WebAnno - Web Annotation</b>: https://webanno.github.io/webanno/
-
-<b>WebAnno source code</b>, more about web development: https://github.com/webanno/webanno
+<b>Web Annotatio Tools</b>
+* WebAnno: https://webanno.github.io/webanno/
+  * WebAnno source code, more about web development: https://github.com/webanno/webanno
+* Brat: http://brat.nlplab.org/examples.html
 
 
 <b>UW NLP TOOLS</b>
