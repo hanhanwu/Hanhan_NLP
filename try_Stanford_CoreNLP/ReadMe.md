@@ -27,7 +27,7 @@ HOW TO INSTALL STANFORD CORE NLP
 timeout is in milliseconds, here we set it to 10 sec above. You should increase it if you pass huge blobs to the server.
 5. `pip3 install pycorenlp`
 6. [pycorenlp][7]
-7. [For an example code to test your setup][6]
+7. [An example code to test your setup - Sentiment Analysis][6]
 8. [CoreNLP Server, quick start][10]
 
 
