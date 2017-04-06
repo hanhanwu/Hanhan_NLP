@@ -215,6 +215,8 @@ NLP research and implementation
 * R Sentiment Analysis
   * Reference - Sentiment analysis on movie and tweet: https://www.analyticsvidhya.com/blog/2017/03/measuring-audience-sentiments-about-movies-using-twitter-and-text-analytics/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * I don't like the word cloud used in the above tutorial. The last methoed with has NRC sentiment dictionary is new to me, worthy to try it. But this tutorial suddenly makes me think, if people are talking about sad movies, although they like the movie but their comments are filled with negative words... How accurate sentiment analysis could be? I think maybe, at least put sentiment analysis and the words location together to measure?
+  * My code, generate tweets in R:https://github.com/hanhanwu/Hanhan_NLP/blob/master/generate_tweets.R
+  * How tweet search query works, and tutorial for generating tweets in R: http://bogdanrau.com/blog/collecting-tweets-using-r-and-the-twitter-search-api/
 
 
 <b>NLP Tools Research</b>
