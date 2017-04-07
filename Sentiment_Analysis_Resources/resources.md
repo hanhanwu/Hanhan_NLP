@@ -14,3 +14,5 @@ Abusive Language Detection
 * In general, after reading the above 2 papers, I feel doing large scale sentiment analysis is challenging, because human experts define the meaning of lables (such as "abusive", "toxic") are different, and maybe in different context (such as Wiki data or Facebook data) the definition could also vary? How could researchers in sentiment analysis area find really reliable scientific method to prove their theories?
 
 * Edtorial Criteria and Automation: https://isojjournal.wordpress.com/2015/04/15/picking-the-nyt-picks-editorial-criteria-and-automation-in-the-curation-of-online-news-comments/
+  * I like `Automatically Computed Ratings` section, it talks about the auto rating methods can be used on crowd sourcing, and to measure Brevity, Readability (those indexes are trying to measure the number of years schooling), Degree of personal experience sharing
+  * Crowd Sourcing criteria they used: Argument Quality, Criticality, Internal Coherence, Personal Experience, Readability, and Thoughtfulness
