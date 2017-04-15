@@ -214,9 +214,12 @@ NLP research and implementation
 
 * R Sentiment Analysis
   * Reference - Sentiment analysis on movie and tweet: https://www.analyticsvidhya.com/blog/2017/03/measuring-audience-sentiments-about-movies-using-twitter-and-text-analytics/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-  * I don't like the word cloud used in the above tutorial. The last methoed with has NRC sentiment dictionary is new to me, worthy to try it. But this tutorial suddenly makes me think, if people are talking about sad movies, although they like the movie but their comments are filled with negative words... How accurate sentiment analysis could be? I think maybe, at least put sentiment analysis and the words location together to measure?
-  * My code, generate tweets in R:https://github.com/hanhanwu/Hanhan_NLP/blob/master/generate_tweets.R
-  * How tweet search query works, and tutorial for generating tweets in R: http://bogdanrau.com/blog/collecting-tweets-using-r-and-the-twitter-search-api/
+    * This tutorial is worthy to try is because of the `NRC sentiment dictionary` they use. In R, if you use `library syuzhet` you can use the sentiment dictionary. It has multiple sentiment levels: <b>"Positive","Anger","Anticipation","Disgust","Fear","Joy","Sadness","Surprise","Trust","Negative"</b>
+    * <b>My code</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/tweets_sentiment_analysis.R
+    * My code includes Tweet data collection, sentiment analysis and visualization
+    * Resource about collect tweets through R - How tweet search query works, and tutorial for generating tweets in R: http://bogdanrau.com/blog/collecting-tweets-using-r-and-the-twitter-search-api/
+  * Stanford Sentiment Analysis Example: http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
+    * In Stanford sentiment analysis, their sentiment levels are: <b>VeryPositive, Positive, Nuetral, Negative, VeryNegative</b>
 
 
 <b>NLP Tools Research</b>
