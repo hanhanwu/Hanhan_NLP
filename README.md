@@ -234,6 +234,9 @@ NLP research and implementation
   * Spack API Reference: https://spacy.io/docs/api/
   * NLP Tutorials: https://spacy.io/docs/usage/tutorials
   * Spacy Workflow: https://spacy.io/docs/usage/language-processing-pipeline
+  * My code for basic try spacy: https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Spacy.ipynb
+  * Reference: https://www.analyticsvidhya.com/blog/2017/04/natural-language-processing-made-easy-using-spacy-%E2%80%8Bin-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    * For the machine learning part in this tutorial, I didn't try, since I think only the pipeline part is special but I don't see any meaning for the author to create `class predictors`. If I have to use pipeline in my personal projects, I'd rather to use Spark + Stanford CoreNLP
  
 * Tools built on Spacy (maybe they are even better)
   * Overall: https://spacy.io/docs/usage/showcase
