@@ -41,6 +41,8 @@ NLP research and implementation
 
 <b>PRACTICE</b>
 
+* When dealing with special characters in text, ASCII and Binary Characteristics: http://roubaixinteractive.com/PlayGround/Binary_Conversion/The_Characters.asp
+
 * Keywords Search for Short Context
   * When the text context is very short, and you cannot build the search engine by simply calculating query terms distance, query terms frequency or query terms position. 
   * In the code here, I am trying different methods to allow better key words search for short context. https://github.com/hanhanwu/Hanhan_NLP/blob/master/short_context_search.py
