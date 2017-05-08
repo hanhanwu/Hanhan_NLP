@@ -74,6 +74,11 @@ NLP research and implementation
   * [Reference][9]
   * [my code][10]
  
+* R Web Mining
+  * Learning Resource: https://www.analyticsvidhya.com/blog/2017/03/beginners-guide-on-web-scraping-in-r-using-rvest-with-hands-on-knowledge/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * My R code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/R_web_parsing.R
+  * The way I parse the data is totally different from the methods used in learning resources. In the learning resource, they are using class name, and when there are multiple web elements with the same class names, their method may not be able to find the content in order. In my code, I have found that using `XPATH` is much better for this case, and with `Firebug`, you can simply right click to copy the `XPATH` of your web element, write a function to get the content in order
+
  
 [5]:https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance
 [6]:https://en.wikipedia.org/wiki/Hamming_distance
