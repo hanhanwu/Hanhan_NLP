@@ -95,6 +95,17 @@ NLP research and implementation
 * How to improve search accuracy with Google Search
   * Simple video explains how google search works: https://www.youtube.com/watch?v=KyCYyoGusqs
   * Operators used in google search query, looks helpful: https://support.google.com/websearch/answer/2466433?visit_id=1-636146162684675642-3633116773&rd=1
+  
+  
+* <b>Word Embeding Methods</b>
+  * Reference: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * Frequency based Embedding
+    * Count Vectors
+    * TF-IDF
+    * Co-Occurrence Matrix
+  * Prediction based Embedding (but methods here need you manually create lables)
+    * CBOW
+    * Skip-Gram
 
 
 <b>Auto Search APIs</b>
