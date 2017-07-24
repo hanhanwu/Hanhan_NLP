@@ -286,7 +286,7 @@ NLP research and implementation
 
 *********************************************************************************************
 
-<b>ADVEMCED NLP TOOLS/OPEN SOURCE</b>
+<b>ADVENCED NLP TOOLS/OPEN SOURCE</b>
 
 <b>Format JSON Output</b>, when you don't have notepad++: http://jsonviewer.stack.hu/
 
@@ -322,6 +322,13 @@ NLP research and implementation
   * R text mining basics: https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html
   * Helpful resource - sorting R matrix: https://www.r-bloggers.com/sorting-rows-and-colums-in-a-matrix-with-some-music-and-some-magic/
   * More about LDA with Python code (still for beginners): https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  
+
+* Facebook Research: https://github.com/facebookresearch
+  * It includes not only NLP, but also AI
+  * FastText: https://github.com/facebookresearch/fastText
+    * It can help supervised text classification
+    * I didn't try it, sounds fast... But you need to give the label...
 
 
 *********************************************************************************************
