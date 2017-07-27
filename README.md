@@ -209,6 +209,10 @@ NLP research and implementation
   * If you check Scrapy Pipeline document here, it's difficult to really get thing done: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
   * Here is my detailed readme about what did I try and worked: https://github.com/hanhanwu/Hanhan_NLP/blob/master/HanhanScrapt/Hanhan_Scrapy_Pipeline_ReadMe.md
   * All my Scrapy Pipeline code: https://github.com/hanhanwu/Hanhan_NLP/tree/master/HanhanScrapt
+* Other Scrapy Resources
+  * Web Scrapign: https://www.analyticsvidhya.com/blog/2017/07/web-scraping-in-python-using-scrapy/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    * Extract web elements such as images, text, votes, etc. with Scrapy Spider
+    * Based on my experience, Scrapy only works well when the webiste does not use any bot to prevent customized spiders (even if you change Scrapy bot settings). Python selenium often works even when there is bot.
  
 
 <b>Entity Recognizer</b>
