@@ -1,40 +1,36 @@
 # Hanhan_NLP
 NLP research and implementation
 
-
-
-<b>RESEARCH PAPERS</b>
-
-* <b>Computational Linguistics</b> - MIT Press: http://www.mitpressjournals.org/loi/coli
-
-* <b>SO-CAL in NLP</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Taboada_etal_SO-CAL.pdf
-
-* <b>Analysis of Collaborative Writing Processes Using Hidden Markov Models and Semantic Heuristics</b> - It analysis the PROCESS of collaborative writing and predict writing performance
-* Inspiration
-  * Maybe I can try HMM in my semantic layer, see what kind of key components will lead to what kind of result
-  * It's a good idea to record writing behaviour and do analysis, plus time/duration may be better
-
-
-* <b>Text - Independent Speaker Identification using Hidden Markov Models</b>
-* <b>Hidden Markov Models in Text Recognition</b>
-* Python HMM
-  * http://scikit-learn.sourceforge.net/stable/modules/hmm.html
-  * https://github.com/hanhanwu/hmmlearn/blob/master/examples/plot_hmm_stock_analysis.py
-* R HMM
-  * https://cran.r-project.org/web/packages/HMM/HMM.pdf
-
-* <b>Author Recognition</b>
-  * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
- 
-
 *********************************************************************************************
 
-<b>LEARNING RESOURCES</b>
+<b>Somethig About NLP</b>
 
-* SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
-* SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
-* Deep Leanring Course with NLP: http://cs224d.stanford.edu/syllabus.html
-* Deep Learning in NLP & Speech/Audio: https://www.analyticsvidhya.com/blog/2016/08/deep-learning-path/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Basic TOP 9 NLP Operations
+  * Stemming
+    * Shorten the words. 
+    * Such as "beautiful" and "beautifully" are stemmed to "beauti"
+  * Lemmatisation
+    * Reduce words into their lemma/dictionary form. 
+    * Such as "good", "better" and "best" are lemmatised to "good"
+  * Words Embedding
+    * A word or a phase is represented in a fixed dimensional vector of length X
+  * Part-of-Speech Tagging
+    * Tag word type (such as Noun, Verb, Adj. etc.) fo each word in the text
+  * Named Entity Disambiguation
+    * Try to link the entity in the text with knowledge
+    * such as, "Apple has best phone", machine needs to figure out "Apple" is a company or fruit or something else
+  * Named Entity Recognition
+    * Give the entity a category
+    * Such as Location, Person, Date, Organization
+  * Sentiment Analysis
+  * Semantic Text Similarity
+    * Semantic Text Similarity is the process of analysing similarity between two pieces of text with respect to the <b>meaning and essence</b> of the text rather than analysing the syntax of the two pieces of text
+  * Text Summarisation
+    * Identify important points to form a summary
+    * The goal of Text Summarisation is to retain maximum information along with maximum shortening of text without altering the meaning of the text.
+  * Documents: https://www.analyticsvidhya.com/blog/2017/10/essential-nlp-guide-data-scientists-top-10-nlp-tasks/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    * It has Python code for implementation of each task
+    * Also has relavant papers, application
 
 
 *********************************************************************************************
@@ -345,3 +341,39 @@ NLP research and implementation
 [2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
 [3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
 [4]:https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+
+
+*********************************************************************************************
+
+<b>RESEARCH PAPERS</b>
+
+* <b>Computational Linguistics</b> - MIT Press: http://www.mitpressjournals.org/loi/coli
+
+* <b>SO-CAL in NLP</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Taboada_etal_SO-CAL.pdf
+
+* <b>Analysis of Collaborative Writing Processes Using Hidden Markov Models and Semantic Heuristics</b> - It analysis the PROCESS of collaborative writing and predict writing performance
+* Inspiration
+  * Maybe I can try HMM in my semantic layer, see what kind of key components will lead to what kind of result
+  * It's a good idea to record writing behaviour and do analysis, plus time/duration may be better
+
+
+* <b>Text - Independent Speaker Identification using Hidden Markov Models</b>
+* <b>Hidden Markov Models in Text Recognition</b>
+* Python HMM
+  * http://scikit-learn.sourceforge.net/stable/modules/hmm.html
+  * https://github.com/hanhanwu/hmmlearn/blob/master/examples/plot_hmm_stock_analysis.py
+* R HMM
+  * https://cran.r-project.org/web/packages/HMM/HMM.pdf
+
+* <b>Author Recognition</b>
+  * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
+ 
+
+*********************************************************************************************
+
+<b>LEARNING RESOURCES</b>
+
+* SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
+* SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
+* Deep Leanring Course with NLP: http://cs224d.stanford.edu/syllabus.html
+* Deep Learning in NLP & Speech/Audio: https://www.analyticsvidhya.com/blog/2016/08/deep-learning-path/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
