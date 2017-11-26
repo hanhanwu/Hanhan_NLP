@@ -238,6 +238,17 @@ NLP research and implementation
     * Resource about collect tweets through R - How tweet search query works, and tutorial for generating tweets in R: http://bogdanrau.com/blog/collecting-tweets-using-r-and-the-twitter-search-api/
   * Stanford Sentiment Analysis Example: http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
     * In Stanford sentiment analysis, their sentiment levels are: <b>VeryPositive, Positive, Nuetral, Negative, VeryNegative</b>
+    
+* Python Flash Text - Search, Replace words in text, faster than regex
+  * reference: https://www.analyticsvidhya.com/blog/2017/11/flashtext-a-library-faster-than-regular-expressions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * flashtext: https://pypi.python.org/pypi/flashtext/2.2
+    * I don't really like that 'remove keywords' feature
+  * It's using <b>Trie Data Structure</b> for the words
+  * <b>Single Pass vs No Single Pass</b>
+    * With single pass, each word replacing will use the origial text/string as input
+    * Without single pass, each replace is built based on the last replacing
+  * FlashText is faster than regex is because, it checks whether the keyword exists in keyword dictionary, rather than checking the whole text
+  * my code: https://github.com/hanhanwu/Basic_But_Useful/blob/master/try_flashtext.ipynb
 
 
 <b>NLP Tools Research</b>
