@@ -219,6 +219,15 @@ NLP research and implementation
   * My code to extract people names with NER: https://github.com/hanhanwu/Hanhan_NLP/blob/master/extract_people_names.py
 
 
+<b>Information Retrieval</b>
+
+* It helps find relevant information/documents that can satisfiy readers requirements
+* You can use this method in:
+  * Search Engine
+  * Content Based Image Retrieval
+  * Recommendation System
+
+
 <b>Sentiment Analysis</b>
 
 * Resources: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/resources.md
