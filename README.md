@@ -226,6 +226,18 @@ NLP research and implementation
   * Search Engine
   * Content Based Image Retrieval
   * Recommendation System
+* KNN vs KD Tree
+  * KNN takes O(N) time for N data points; KNN with K Neighbour search takes O(log(K)*N). In both cases, when there are large amount of data points, KNN can be time consuming
+  * KD Tree is an improvement on KNN, it uses both decision tree and KNN to  calculate nearest neighbours
+    * Similar to binary search tree, you build a decision tree by spliting training data based on certain conditions. Now when there is a testing data, it travels from root to the node its condition satisfied with.
+    * But locating the node for your testing data doesn't mean data points in that node are the nearest neighbour. You need to check sibling nodes by tracing back to 1 level parent root and gets to sibling nodes each time, compare the nearest distance with current nearest data point
+    * This method can help you get rid of subtress and improve the time efficiency
+    * Also KD Tree allows you to split and organize data based on certain conditions
+    * Average time complexity O(log(N)), worst case O(N) when the data structure and conditions make the tress like a list
+    * KDTree may not work well in high dimensions (lots of features). When there are many features, you still need to check many partitions in the tree, won't be very efficient. I would do dimensional reduction first and and try KDTree, and compare with other algorithms
+  * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/KDTree_Information_Retrieval.ipynb
+    * In this code, I'm using KDTree to retrieve text close to 'Emmanuel'! It works well!
+  * reference: https://www.analyticsvidhya.com/blog/2017/11/information-retrieval-using-kdtree/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 <b>Sentiment Analysis</b>
