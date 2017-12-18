@@ -5,6 +5,12 @@ NLP research and implementation
 
 <b>Somethig About NLP</b>
 
+* Computational Linguistics Basics: https://www.analyticsvidhya.com/blog/2017/12/introduction-computational-linguistics-dependency-trees/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * Dependency trees
+  * Stanford Dependencies Manual: https://nlp.stanford.edu/software/dependencies_manual.pdf
+  * Coreference Resolution or Anaphora Resolution
+    * Identify all the expressions that refer to the same entity
+
 * Basic TOP 9 NLP Operations
   * Stemming
     * Shorten the words. 
@@ -33,6 +39,11 @@ NLP research and implementation
     * Also has relavant papers, application
   * My code: https://github.com/hanhanwu/Basic_But_Useful/blob/master/NLP_basic_preprocessing.ipynb
     * It has more
+    * Major libraries you can try for NLP tasks
+      * nltk - very basic
+      * Spacy
+      * Standard core NLP
+      * gensim - topic modeling
 
 
 *********************************************************************************************
