@@ -1,5 +1,6 @@
 '''
 Created on Nov 1, 2016
+2017 Update, new vaderSentiment can be found at: https://github.com/cjhutto/vaderSentiment
 '''
 
 from vaderSentiment import sentiment as vaderSentiment
