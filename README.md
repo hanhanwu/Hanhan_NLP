@@ -28,9 +28,11 @@ NLP research and implementation
   * Text Summarisation
     * Identify important points to form a summary
     * The goal of Text Summarisation is to retain maximum information along with maximum shortening of text without altering the meaning of the text.
-  * Documents: https://www.analyticsvidhya.com/blog/2017/10/essential-nlp-guide-data-scientists-top-10-nlp-tasks/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * refernece: https://www.analyticsvidhya.com/blog/2017/10/essential-nlp-guide-data-scientists-top-10-nlp-tasks/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
     * It has Python code for implementation of each task
     * Also has relavant papers, application
+  * My code: https://github.com/hanhanwu/Basic_But_Useful/blob/master/NLP_basic_preprocessing.ipynb
+    * It has more
 
 
 *********************************************************************************************
