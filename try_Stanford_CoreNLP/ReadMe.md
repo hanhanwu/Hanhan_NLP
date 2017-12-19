@@ -10,12 +10,6 @@ RESOURCES
 * [Details about the whole setup process][4]
 
 
-[1]:https://nlp.stanford.edu/software/
-[2]:http://stanfordnlp.github.io/CoreNLP/
-[3]:http://stanfordnlp.github.io/CoreNLP/other-languages.html#python
-[4]:http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
-
-
 *****************************************************************************
 
 HOW TO INSTALL STANFORD CORE NLP
@@ -31,12 +25,6 @@ timeout is in milliseconds, here we set it to 10 sec above. You should increase 
 8. [CoreNLP Server, quick start][10]
 
 
-[5]:http://stanfordnlp.github.io/CoreNLP/
-[6]:http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
-[7]:https://github.com/smilli/py-corenlp
-[10]:http://stanfordnlp.github.io/CoreNLP/corenlp-server.html
-
-
 *****************************************************************************
 
 TEXT PREPROCESSING
@@ -50,12 +38,47 @@ TEXT PREPROCESSING
 * As you can see in OO design example, there are 2 versions preprocess code, [version 1][14] and [version 2][13]. I have made some changes in version 2, so that it is more robust if someone else want to use or modify the code.
 
 
+*****************************************************************************
+
+DEPENDENCY TREES
+
+* To use Stanford Core NLP is truly painful, it has so many wrapper or relevant simplified libraries, with different methods to turn on the server, and in order to turn server you may need to be under a certain folder, type the right command or there are other constraints....
+* Anyway, let me reocrd methods I tried...
+* Method 1 - pycorenlp
+  * `pip install pycorenlp`
+  * Download [Newest Stanford CoreNLP][5]
+  * Unzip your downloaded .zip file. For example, `unzip stanford-corenlp-full-2016-10-31.zip`
+  * `cd stanford-corenlp-full-2016-10-31`
+  * `java -mx5g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 10000`, this will start the server.
+  * Run your python code under folder `stanford-corenlp-full-2016-10-31/`...
+  * Check my code [here][15] for METHOD 1
+  
+* Method 2 - stanford-core-python
+  * <b>Better NOT to try this one</b>
+  * This requires old format for not only input file but also old core NLP package, very troublesome
+  * Download the required package and install the server: https://github.com/dasmith/stanford-corenlp-python
+    * Only `stanford-corenlp-full-2014-08-27.zip` would work, I tried other release, didn't work
+  * Then try similar command line here: https://nlp.stanford.edu/software/lex-parser.shtml
+    * `java -mx200m -cp "*" edu.stanford.nlp.parser.lexparser.LexicalizedParser -retainTMPSubcategories -outputFormat "wordsAndTags,penn,typedDependencies" englishPCFG.ser.gz mumbai.txt`
+      * When you are using `-cp "*"`, run the command under folder `stanford-corenlp-full-2014-08-27/`
+      * `englishPCFG.ser.gz mumbai.txt` has special format and your input file has to be that format.... But I don't know what is that old format, looks so troublesome, lazy people like me will just try another solution... Also, the input has to be a file, cannot be a string
+  
+  
+*****************************************************************************
+
+[1]:https://nlp.stanford.edu/software/
+[2]:http://stanfordnlp.github.io/CoreNLP/
+[3]:http://stanfordnlp.github.io/CoreNLP/other-languages.html#python
+[4]:http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
+[5]:http://stanfordnlp.github.io/CoreNLP/
+[6]:http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
+[7]:https://github.com/smilli/py-corenlp
+[10]:http://stanfordnlp.github.io/CoreNLP/corenlp-server.html
 [8]:http://stanfordnlp.github.io/CoreNLP/annotators.html
 [9]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/simple_parsing_example.py
 [11]:https://github.com/hanhanwu/Hanhan_NLP/tree/master/try_Stanford_CoreNLP/parsing_with_OO
 [12]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/run_source_code.sh
 [13]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess2.py
 [14]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess.py
-
-
-*****************************************************************************
+[15]https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP_dependency_trees.ipynb
+  
