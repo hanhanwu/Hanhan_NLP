@@ -80,5 +80,5 @@ DEPENDENCY TREES
 [12]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/run_source_code.sh
 [13]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess2.py
 [14]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess.py
-[15]https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP_dependency_trees.ipynb
+[15]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP_dependency_trees.ipynb
   
