@@ -44,6 +44,7 @@ DEPENDENCY TREES
 
 * To use Stanford Core NLP is truly painful, it has so many wrapper or relevant simplified libraries, with different methods to turn on the server, and in order to turn server you may need to be under a certain folder, type the right command or there are other constraints....
 * Anyway, let me reocrd methods I tried...
+
 * Method 1 - pycorenlp
   * `pip install pycorenlp`
   * Download [Newest Stanford CoreNLP][5]
@@ -63,8 +64,18 @@ DEPENDENCY TREES
       * When you are using `-cp "*"`, run the command under folder `stanford-corenlp-full-2014-08-27/`
       * `englishPCFG.ser.gz mumbai.txt` has special format and your input file has to be that format.... But I don't know what is that old format, looks so troublesome, lazy people like me will just try another solution... Also, the input has to be a file, cannot be a string
   
-  
-*****************************************************************************
+* Method 3 - Python stanfordcorenlp
+  * Python stanfordcorenlp: https://github.com/Lynten/stanford-corenlp
+  * corenlp.py: https://github.com/Lynten/stanford-corenlp/blob/master/stanfordcorenlp/corenlp.py
+    * To check this code, it may help you figure out why your `StanfordCoreNLP()` is running forever...
+  * How to run your code (to figure it out, it was a pain...)
+    * Download and unzip newest Stanford Core NLP as method 1
+    * `cd stanford-corenlp-full-2016-10-31`
+    * Start the server by typing `java -mx5g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -timeout 10000`
+    * Then open another terminal, run your python code, but the path should be the folder that contains Stanford Core NLP package
+  * Check my code [here][15] for METHOD 3
+    * Pay attention to the path here. I was running the code inside of Stanford Core NLP package, and therefore my path is `r'../stanford-corenlp-full-2017-06-09/'`
+
 
 [1]:https://nlp.stanford.edu/software/
 [2]:http://stanfordnlp.github.io/CoreNLP/
@@ -81,4 +92,3 @@ DEPENDENCY TREES
 [13]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess2.py
 [14]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_Stanford_CoreNLP/parsing_with_OO/text_preprocessing/preprocess.py
 [15]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP_dependency_trees.ipynb
-  
