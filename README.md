@@ -251,6 +251,12 @@ NLP research and implementation
   * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/KDTree_Information_Retrieval.ipynb
     * In this code, I'm using KDTree to retrieve text close to 'Emmanuel'! It works well!
   * reference: https://www.analyticsvidhya.com/blog/2017/11/information-retrieval-using-kdtree/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Distance Methods used in KNN
+  * The paper: https://github.com/hanhanwu/readings/blob/master/knn_distance_algs.pdf
+  * There are definitions of 11 distance methods
+  * They have compared 8 datasets with 11 distance methods and found:
+    * Hamming and Jaccard perform worst since these 2 methods will be affected by the ratio of the members of each class, while other methods won't be affected
+    * The top 6 distance methods a they tried in KNN are: City-block, Chebychev, Euclidean, Mahalanobis, Minkowski, Standardized Enuclidean techniques
 
 
 <b>Sentiment Analysis</b>
