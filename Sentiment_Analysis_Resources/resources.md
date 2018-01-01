@@ -16,3 +16,10 @@ Abusive Language Detection
 * Edtorial Criteria and Automation: https://isojjournal.wordpress.com/2015/04/15/picking-the-nyt-picks-editorial-criteria-and-automation-in-the-curation-of-online-news-comments/
   * I like `Automatically Computed Ratings` section, it talks about the auto rating methods can be used on crowd sourcing, and to measure Brevity, Readability (those indexes are trying to measure the number of years schooling), Degree of personal experience sharing
   * Crowd Sourcing criteria they used: Argument Quality, Criticality, Internal Coherence, Personal Experience, Readability, and Thoughtfulness
+
+* Sentiment Analysis in video game
+  * The paper: http://www.sciencedirect.com/science/article/pii/S0950705117304240?via%3Dihub
+    * It's first 30 days was free, so I got the free one. But here, you have to pay for the authors :)
+  ![sentiment analysis in video game](https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/video_game_sentiment_analysis.png)
+  * Gammers submitted the games here: http://www.skillcraft.ca/
+  * They used SO-CAL for the analysis: https://github.com/sfu-discourse-lab/SO-CAL
