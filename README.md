@@ -382,6 +382,12 @@ NLP research and implementation
     * I didn't try it, sounds fast... But you need to give the label...
 
 
+* Chat Bot - RASA-NLU
+  * RASA-NLU: https://github.com/RasaHQ/rasa_nlu
+    * You need to provide the training data yourself
+  * How other use RASA-NLU to build chat-bot app: https://www.analyticsvidhya.com/blog/2018/01/faq-chatbots-the-future-of-information-searching/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    * source code: https://github.com/yogeshhk/gstfaqbot
+
 *********************************************************************************************
 
 <b>My NLP Presentation</b>
