@@ -422,9 +422,11 @@ NLP research and implementation
 
 *********************************************************************************************
 
-<b>LEARNING RESOURCES</b>
+<b>OTHER RESOURCES</b>
 
 * SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
 * SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
 * Deep Leanring Course with NLP: http://cs224d.stanford.edu/syllabus.html
 * Deep Learning in NLP & Speech/Audio: https://www.analyticsvidhya.com/blog/2016/08/deep-learning-path/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+* Stanford Question Answering Dataset: https://rajpurkar.github.io/SQuAD-explorer/
+  * A new about Alibaba and MSR: https://www.analyticsvidhya.com/blog/2018/01/alibabas-neural-network-model-beat-highest-human-score-stanfords-reading-test/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
