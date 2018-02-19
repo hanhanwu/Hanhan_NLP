@@ -11,13 +11,16 @@ NLP research and implementation
   * Coreference Resolution or Anaphora Resolution
     * Identify all the expressions that refer to the same entity
 
-* Basic TOP 9 NLP Operations
+* Basic TOP k NLP Operations
   * Stemming
     * Shorten the words. 
     * Such as "beautiful" and "beautifully" are stemmed to "beauti"
   * Lemmatisation
     * Reduce words into their lemma/dictionary form. 
     * Such as "good", "better" and "best" are lemmatised to "good"
+  * Words Inflection
+    * Looks like the opposite operation of Lemmatisation/Stemming
+    * It adds the characters to a word base format, so that we get more formats, such as singular or plural
   * Words Embedding
     * A word or a phase is represented in a fixed dimensional vector of length X
   * Part-of-Speech Tagging
@@ -44,6 +47,14 @@ NLP research and implementation
       * Spacy
       * Standard core NLP
       * gensim - topic modeling
+  * My code2: https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP_textblob.ipynb
+    * It is using an NLP library - TextBlob, which is build upon nltk
+    * TextBlob makes calling nltk functions easier, but the functions are very basic. Spacy is fasteer and may provides more NLP data manipulation functions; classifiers are also basic
+    * However, <b>I like the Language Translation in TextBlob</b>. It's built upon Google Translate, you don't need to download any language package, and it can do the translation, looks not bad
+    * Sentiment Analysis tells not only positive & negative, but also trying to tell how subjective a statement is. 
+      * Language codes supported: https://cloud.google.com/translate/docs/languages
+    * TextBlob document: http://textblob.readthedocs.io/en/dev/
+    * reference: https://www.analyticsvidhya.com/blog/2018/02/natural-language-processing-for-beginners-using-textblob/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 *********************************************************************************************
