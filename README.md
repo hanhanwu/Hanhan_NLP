@@ -117,12 +117,21 @@ NLP research and implementation
   * Operators used in google search query, looks helpful: https://support.google.com/websearch/answer/2466433?visit_id=1-636146162684675642-3633116773&rd=1
   
   
-* <b>Word Embeding Methods</b>
+* <b>Word Embedding Methods</b>
   * Reference: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * Frequency based Embedding
     * Count Vectors
+      * Imagine you have a table, each column is a unique word, each row is a document
+      * In a corpus, unique words are top couted words, otherwise that's too much
+      * For the same document, the word count for each word - Document Vector
+      * For the same word, its count in each document - Word Vector
     * TF-IDF
-    * Co-Occurrence Matrix
+      * It checks not only how many times a word appears in one document, but also checks the time it appears in the whole corpus. And it will penalize those common words which appeared in large number of documents, in this way, it is more likely to find real important words for a subset of documents
+      * `TF = the number of time word t appears in 1 document`
+      * `IDF = log(N/n)`, N is the number of documents, n is the number of documents that t appeared. In this way, when n is large, IDF tend to get closer to 0, and therefore those stop words will get low score (`TF * IDF`)
+    * Co-Occurrence Matrix & Context Window
+      * With context window, it defines the number of words together, and even a direction. For example, 2 words together
+      * Co-occurance will be the count of word tuples, the number of words ina tuple is defined by context window. For example, count the co-occurance of (ice, cream)
   * Prediction based Embedding (but methods here need you manually create lables)
     * CBOW
     * Skip-Gram
