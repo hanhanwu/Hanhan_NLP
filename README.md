@@ -132,8 +132,12 @@ NLP research and implementation
     * Co-Occurrence Matrix & Context Window
       * With context window, it defines the number of words together, and even a direction. For example, 2 words together
       * Co-occurance will be the count of word tuples, the number of words ina tuple is defined by context window. For example, count the co-occurance of (ice, cream)
-      * Co-occurrence matrix can be huge even remove stop words. it uses algorithms such as PCA to 
-  * Prediction based Embedding (but methods here need you manually create lables)
+      * Co-occurrence matrix can be huge even remove stop words. It uses algorithms such as PCA to decompose.
+        * If you perform PCA on a V*V matrix, you get V principle components. Choose k components out of V, you get a new matrix of V*k
+        * It preserves semantic relationships between words. For example "ice" and "cream" is closer than "ice" and "human"
+        * You just compute it once and can use multiple times, so it's fast
+  * Prediction based Embedding (methods here need you manually create lables)
+    * Word2Vector = CBOW (Continuous bag of Words) + Skip-Gram
     * CBOW
     * Skip-Gram
 
