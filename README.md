@@ -138,8 +138,13 @@ NLP research and implementation
         * You just compute it once and can use multiple times, so it's fast
   * Prediction based Embedding (methods here need you manually create lables)
     * Word2Vector = CBOW (Continuous bag of Words) + Skip-Gram
-    * CBOW
+      * CBOW: 
+        * Probabilistic, better than deterministic. 
+        * Lower memory requirement
+        * It's neural network and the hidden layer taks advantage of the context
     * Skip-Gram
+      * It's also neural network, it predicts context given a word
+    * A visualization tool: https://docs.google.com/document/d/1qUH1LvNcp5msoh2FEwTQAUX8KfMq2faGpNv4s4WXhgg/pub
 
 
 <b>Auto Search APIs</b>
