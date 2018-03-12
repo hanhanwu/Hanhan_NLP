@@ -145,6 +145,10 @@ NLP research and implementation
     * Skip-Gram
       * It's also neural network, it predicts context given a word
     * A visualization tool: https://docs.google.com/document/d/1qUH1LvNcp5msoh2FEwTQAUX8KfMq2faGpNv4s4WXhgg/pub
+  * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/try_words_embedding.ipynb
+    * word vector pre-trained model from Google
+    * train your own model by providing sentences
+    * with words embedding, you can search for similar tokens, tokens that always appear together, or tokens that has lower probability to appear with other tokens
 
 
 <b>Auto Search APIs</b>
