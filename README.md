@@ -142,6 +142,9 @@ NLP research and implementation
         * Probabilistic, better than deterministic. 
         * Lower memory requirement
         * It's neural network and the hidden layer taks advantage of the context
+      * Embedding in ANN: https://www.analyticsvidhya.com/blog/2018/04/introductory-guide-understand-how-anns-conceptualize-new-ideas/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+        * In this article, it mentioned word2vector can be expensive for the softmax function at the end, since the output size equals to the vocabulary size. So better to use pretrained word2vec matrix
+        * Therefore, there is another method called <b>Negative Sampling</b>, which converts the problem into binary problem and made softmax calculation efficient
     * Skip-Gram
       * It's also neural network, it predicts context given a word
     * A visualization tool: https://docs.google.com/document/d/1qUH1LvNcp5msoh2FEwTQAUX8KfMq2faGpNv4s4WXhgg/pub
