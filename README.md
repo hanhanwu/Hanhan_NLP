@@ -296,25 +296,27 @@ NLP research and implementation
     * The top 6 distance methods a they tried in KNN are: City-block, Chebychev, Euclidean, Mahalanobis, Minkowski, Standardized Enuclidean techniques
 
 
-<b>Sentiment Analysis</b>
+### Sentiment Analysis
 
-* Resources: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/resources.md
+#### Resources: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Sentiment_Analysis_Resources/resources.md
 
-* nltk Sentiment Analysis
-  * NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
-  * Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
-  * After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
+#### nltk Sentiment Analysis
+* NLTK Sentiment Analysis: http://www.nltk.org/howto/sentiment.html
+#### Vader Sentiment Analysis
+* Download Vader .zip file here: https://github.com/hanhanwu/vaderSentiment
+* After downloading Vader, import all the 3 files in vaderSentiment folder to your python SDK, under the same project you are going to do sentiment analysis
+* Vader can also handle emoji, slang and emoticons: https://medium.com/analytics-vidhya/simplifying-social-media-sentiment-analysis-using-vader-in-python-f9e6ec6fc52f
   * <b>Python 2.x only</b>
-  * My nltk sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
-
-* R Sentiment Analysis
-  * Reference - Sentiment analysis on movie and tweet: https://www.analyticsvidhya.com/blog/2017/03/measuring-audience-sentiments-about-movies-using-twitter-and-text-analytics/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-    * This tutorial is worthy to try is because of the `NRC sentiment dictionary` they use. In R, if you use `library syuzhet` you can use the sentiment dictionary. It has multiple sentiment levels: <b>"Positive","Anger","Anticipation","Disgust","Fear","Joy","Sadness","Surprise","Trust","Negative"</b>
-    * <b>My code</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/tweets_sentiment_analysis.R
-    * My code includes Tweet data collection, sentiment analysis and visualization
-    * Resource about collect tweets through R - How tweet search query works, and tutorial for generating tweets in R: http://bogdanrau.com/blog/collecting-tweets-using-r-and-the-twitter-search-api/
-  * Stanford Sentiment Analysis Example: http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
-    * In Stanford sentiment analysis, their sentiment levels are: <b>VeryPositive, Positive, Nuetral, Negative, VeryNegative</b>
+  * My vader sentiment analysis test code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/nltk_sentiment_analysis_test.py
+#### R Sentiment Analysis
+* Reference - Sentiment analysis on movie and tweet: https://www.analyticsvidhya.com/blog/2017/03/measuring-audience-sentiments-about-movies-using-twitter-and-text-analytics/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  * This tutorial is worthy to try is because of the `NRC sentiment dictionary` they use. In R, if you use `library syuzhet` you can use the sentiment dictionary. It has multiple sentiment levels: <b>"Positive","Anger","Anticipation","Disgust","Fear","Joy","Sadness","Surprise","Trust","Negative"</b>
+  * <b>My code</b>: https://github.com/hanhanwu/Hanhan_NLP/blob/master/tweets_sentiment_analysis.R
+  * My code includes Tweet data collection, sentiment analysis and visualization
+  * Resource about collect tweets through R - How tweet search query works, and tutorial for generating tweets in R: http://bogdanrau.com/blog/collecting-tweets-using-r-and-the-twitter-search-api/
+#### Stanford Sentiment Analysis Example: http://stackoverflow.com/questions/32879532/stanford-nlp-for-python
+  * In Stanford sentiment analysis, their sentiment levels are: <b>VeryPositive, Positive, Nuetral, Negative, VeryNegative</b>
+    
     
 * Python Flash Text - Search, Replace words in text, faster than regex
   * reference: https://www.analyticsvidhya.com/blog/2017/11/flashtext-a-library-faster-than-regular-expressions/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
