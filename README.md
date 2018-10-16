@@ -365,7 +365,14 @@ NLP research and implementation
  
 
 <b>Python Gensim</b> - Topic Modeling
+* General Process:
+  * Preprocess the data, and use different word embedding methods to convert text into vector (tfidf, text-to_vectors also count)
+  * Then apply topic modeling methods
 * https://github.com/hanhanwu/gensim
+  * To check algorithm details, strength: https://radimrehurek.com/gensim/apiref.html
+  * An example of preprocessing the data and topic modeling: https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/lda_training_tips.ipynb
+  * Gensim also supports different word embedding and other text to vector methods: https://github.com/RaRe-Technologies/gensim/blob/develop/tutorials.md#word-embeddings
+  * Supported Topoc Modeling methods: https://github.com/RaRe-Technologies/gensim/blob/develop/tutorials.md#topic-modeling
  
 <b>Pyhthon Pattern</b> - NLP and Machine Learning
 * https://github.com/hanhanwu/pattern
