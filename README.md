@@ -58,6 +58,10 @@ NLP research and implementation
 
 * Some NLP methods for feature extraction in text classification
   * My code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/text_classification_feature_generation.ipynb
+* Other tools similar to tools used above
+  * Flair: https://www.analyticsvidhya.com/blog/2019/02/flair-nlp-library-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+    * pos tag
+    * words embedding
 *********************************************************************************************
 
 <b>PRACTICE</b>
