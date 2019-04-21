@@ -384,20 +384,31 @@ NLP research and implementation
 * https://github.com/hanhanwu/TextBlob
 
 
-*********************************************************************************************
+## ADVENCED NLP TOOLS/OPEN SOURCE
 
-<b>ADVENCED NLP TOOLS/OPEN SOURCE</b>
+### Pretrained Models
+#### NLP Framework
+* The frameworks support multiple NLP tasks, such as machine translation, chatbot, question answering, etc.
+* Multi-purpose Tools
+  * ULMFiT - FastAI
+  * Transformer - Google
+  * BERT - Google
+  * Transformer-XL - Google
+  * GPT-2 - OpenAI
+* Words Embedding Tools
+  * ELMo
+  * Flair - It combines words embedding methods from multiple tools such as GloVe, BERT, ELMo, etc.
+* References
+  * [8 pretrained NLP models][5] - Not only the description of each tool, but also the Github link and some tutorials
 
-<b>Format JSON Output</b>, when you don't have notepad++: http://jsonviewer.stack.hu/
-
-<b>Web Annotatio Tools</b>
+### Web Annotatio Tools
 * WebAnno: https://webanno.github.io/webanno/
   * WebAnno source code, more about web development: https://github.com/webanno/webanno
 * Brat: http://brat.nlplab.org/examples.html
+* <b>Format JSON Output</b>, when you don't have notepad++: http://jsonviewer.stack.hu/
 
 
-<b>UW NLP TOOLS</b>
-
+### UW NLP TOOLS
 * Reverb  (works well on raw text)
   * About Reverb: https://github.com/hanhanwu/reverb
   * My code using reverb for extraction: https://github.com/hanhanwu/Hanhan_NLP/blob/master/reverb_extraction.py
@@ -424,14 +435,13 @@ NLP research and implementation
   * More about LDA with Python code (still for beginners): https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   
 
-* Facebook Research: https://github.com/facebookresearch
+### Facebook Research: https://github.com/facebookresearch
   * It includes not only NLP, but also AI
   * FastText: https://github.com/facebookresearch/fastText
     * It can help supervised text classification
     * I didn't try it, sounds fast... But you need to give the label...
 
-
-* Chat Bot - RASA-NLU
+### Chat Bot - RASA-NLU
   * RASA-NLU: https://github.com/RasaHQ/rasa_nlu
     * You need to provide the training data yourself
   * How other use RASA-NLU to build chat-bot app: https://www.analyticsvidhya.com/blog/2018/01/faq-chatbots-the-future-of-information-searching/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
@@ -441,13 +451,6 @@ NLP research and implementation
 
 <b>My NLP Presentation</b>
 * 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Hanhan_NLP_Presentation.pdf
-
-
-[1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
-[2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
-[3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
-[4]:https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-
 
 *********************************************************************************************
 
@@ -485,3 +488,10 @@ NLP research and implementation
 * Deep Learning in NLP & Speech/Audio: https://www.analyticsvidhya.com/blog/2016/08/deep-learning-path/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 * Stanford Question Answering Dataset: https://rajpurkar.github.io/SQuAD-explorer/
   * A new about Alibaba and MSR: https://www.analyticsvidhya.com/blog/2018/01/alibabas-neural-network-model-beat-highest-human-score-stanfords-reading-test/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+  
+  
+[1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
+[2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
+[3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
+[4]:https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+[5]:https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
