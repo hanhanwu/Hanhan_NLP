@@ -394,6 +394,8 @@ NLP research and implementation
   * ULMFiT - FastAI
   * Transformer - Google
   * BERT - Google
+  * [DistilBERT][6] - A light weighted BERT
+  * [ShuffleNet Series][7] - Computational Efficient CNN Architecture
   * Transformer-XL - Google
   * GPT-2 - OpenAI
 * Words Embedding Tools
@@ -499,3 +501,5 @@ NLP research and implementation
 [3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
 [4]:https://www.analyticsvidhya.com/blog/2017/01/introduction-to-structuring-customer-complaints/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 [5]:https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+[6]:https://github.com/huggingface/pytorch-transformers/tree/master/examples/distillation
+[7]:https://github.com/megvii-model/ShuffleNet-Series
