@@ -1,9 +1,7 @@
 # Hanhan_NLP
 NLP research and implementation
 
-*********************************************************************************************
-
-<b>Somethig About NLP</b>
+## Somethig About NLP
 
 * Computational Linguistics Basics: https://www.analyticsvidhya.com/blog/2017/12/introduction-computational-linguistics-dependency-trees/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * Dependency trees
@@ -484,9 +482,7 @@ NLP research and implementation
   * Using style markers: https://github.com/hanhanwu/Hanhan_NLP/blob/master/author%20recognition.pdf
  
 
-*********************************************************************************************
-
-<b>OTHER RESOURCES</b>
+## OTHER RESOURCES
 
 * SFU CMPT-825 NLP, 2008: http://www.cs.sfu.ca/~anoop/courses/CMPT-825-Spring-2008/
 * SFU CMPT-825 NLP, 2014: http://anoopsarkar.github.io/nlp-class/syllabus.html
@@ -496,6 +492,11 @@ NLP research and implementation
   * A new about Alibaba and MSR: https://www.analyticsvidhya.com/blog/2018/01/alibabas-neural-network-model-beat-highest-human-score-stanfords-reading-test/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   
   
+## NLP in Real World
+* [Mexician Government Report][8]
+  * It's the most simplt NLP usage, but it can help find some insights for government reports
+  
+  
 [1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
 [2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
 [3]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/textacy_explore/go_through_features.py
@@ -503,3 +504,4 @@ NLP research and implementation
 [5]:https://www.analyticsvidhya.com/blog/2019/03/pretrained-models-get-started-nlp/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 [6]:https://github.com/huggingface/pytorch-transformers/tree/master/examples/distillation
 [7]:https://github.com/megvii-model/ShuffleNet-Series
+[8]:https://github.com/PhantomInsights/mexican-government-report
