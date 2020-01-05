@@ -358,6 +358,14 @@ NLP research and implementation
  
 * NLTK
   * NLP basic operations go through: http://clarkgrubb.com/nlp
+  * [NLTK also supports Vader][9]
+    * Although Vader seems still only works in Python 2.*, with NLTK, it also works in python 3
+    * To download `vader_text`:
+      * This may not work:
+        * `import nltk`
+        * `nltk.download('vader_lexicon')`
+      * This works for me:
+        * `python -m nltk.downloader vader_lexicon`, run this in the terminal
  
 * Other Methods
   * [Feature Summary with Python][4] (the data preprocessing methods here are too basic, however, it's very interesting to learn there is `tf-isf` and see the way they calculate it. The only pity is, they got Cue Words manually...)
@@ -505,3 +513,4 @@ NLP research and implementation
 [6]:https://github.com/huggingface/pytorch-transformers/tree/master/examples/distillation
 [7]:https://github.com/megvii-model/ShuffleNet-Series
 [8]:https://github.com/PhantomInsights/mexican-government-report
+[9]:http://www.nltk.org/howto/sentiment.html
