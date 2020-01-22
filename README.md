@@ -332,9 +332,9 @@ NLP research and implementation
   * my code: https://github.com/hanhanwu/Basic_But_Useful/blob/master/try_flashtext.ipynb
 
 
-<b>NLP Tools Research</b>
+## NLP Tools Research
 
-<b>Feature Extraction, for Clustering Use</b>
+### Feature Extraction, for Clustering Use
 
 * Stanford CoreNLP: http://stanfordnlp.github.io/CoreNLP/
 
@@ -373,25 +373,29 @@ NLP research and implementation
 * Methods used in Published Papers
   * Threat Comments Detection (check their features selection): https://www.semanticscholar.org/paper/Threat-detection-in-online-discussions-Wester-%C3%98vrelid/f4150e2fb4d8646ebc2ea84f1a86afa1b593239b
  
-
-<b>Python Gensim</b> - Topic Modeling
-* General Process:
-  * Preprocess the data, and use different word embedding methods to convert text into vector (tfidf, text-to_vectors also count)
-  * Then apply topic modeling methods
-* https://github.com/hanhanwu/gensim
+* Python Gensim - Topic Modeling
+  * General Process:
+    * Preprocess the data, and use different word embedding methods to convert text into vector (tfidf, text-to_vectors also count)
+    * Then apply topic modeling methods
+  * https://github.com/hanhanwu/gensim
   * To check algorithm details, strength: https://radimrehurek.com/gensim/apiref.html
   * An example of preprocessing the data and topic modeling: https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/lda_training_tips.ipynb
   * Gensim also supports different word embedding and other text to vector methods: https://github.com/RaRe-Technologies/gensim/blob/develop/tutorials.md#word-embeddings
   * Supported Topoc Modeling methods: https://github.com/RaRe-Technologies/gensim/blob/develop/tutorials.md#topic-modeling
  
-<b>Pyhthon Pattern</b> - NLP and Machine Learning
-* https://github.com/hanhanwu/pattern
+* Pyhthon Pattern - NLP and Machine Learning
+  * https://github.com/hanhanwu/pattern
 
-<b>Python TextBlob</b> - NLP, built upon NLTK and Pattern
-* https://github.com/hanhanwu/TextBlob
+* Python TextBlob - NLP, built upon NLTK and Pattern
+  * https://github.com/hanhanwu/TextBlob
 
 
 ## ADVENCED NLP TOOLS/OPEN SOURCE
+
+### seealsology - Wikipedia Web Crawler & Auto Graph Building
+* It's tool crawling links in given Wiki pages and will generate a URL graph automatically, you can also download the graph for further analysis.
+  * The strength of graph is, it allows to you analyze the relationship between pages
+* https://densitydesign.github.io/strumentalia-seealsology/
 
 ### Pretrained Models
 #### NLP Framework
