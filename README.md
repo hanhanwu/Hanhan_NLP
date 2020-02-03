@@ -508,6 +508,9 @@ NLP research and implementation
 * [Mexician Government Report][8]
   * It's the most simplt NLP usage, but it can help find some insights for government reports
   
+## Regex Cheatsheet
+* `re.findall(r"[\w.-]+@[\w.-]+", text)` to extract the email address from the text
+  
   
 [1]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/preprocess.py
 [2]:https://github.com/chartbeat-labs/textacy/blob/master/textacy/extract.py
