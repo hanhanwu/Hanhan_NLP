@@ -413,6 +413,12 @@ NLP research and implementation
   * Flair - It combines words embedding methods from multiple tools such as GloVe, BERT, ELMo, etc.
 * References
   * [8 pretrained NLP models][5] - Not only the description of each tool, but also the Github link and some tutorials
+#### Transformers
+* [What is transformer][10]
+  * "The Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution."
+  * "Self-attention, sometimes called intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence."
+* [Reformer][11]
+  * It performs as well as those giant Transformer models, but it does so while using far less resources and money.
 
 ### Web Annotatio Tools
 * WebAnno: https://webanno.github.io/webanno/
@@ -521,3 +527,5 @@ NLP research and implementation
 [7]:https://github.com/megvii-model/ShuffleNet-Series
 [8]:https://github.com/PhantomInsights/mexican-government-report
 [9]:http://www.nltk.org/howto/sentiment.html
+[10]:https://www.analyticsvidhya.com/blog/2019/06/understanding-transformers-nlp-state-of-the-art-models/?utm_source=blog&utm_medium=5-open-source-machine-learning-projects-data-scientist
+[11]:https://github.com/lucidrains/reformer-pytorch
