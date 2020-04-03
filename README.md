@@ -469,14 +469,14 @@ NLP research and implementation
 ### XLNet
 * https://github.com/zihangdai/xlnet
 
-*********************************************************************************************
 
-<b>My NLP Presentation</b>
+## My NLP Presentation
 * 2016/8/24: https://github.com/hanhanwu/Hanhan_NLP/blob/master/Hanhan_NLP_Presentation.pdf
 
-*********************************************************************************************
 
-<b>RESEARCH PAPERS</b>
+## RESEARCH PAPERS
+
+* <b>NLP Research Papers collection on Github</b>: https://github.com/dair-ai/nlp_paper_summaries
 
 * <b>Computational Linguistics</b> - MIT Press: http://www.mitpressjournals.org/loi/coli
 
