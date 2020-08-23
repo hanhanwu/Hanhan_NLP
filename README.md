@@ -130,6 +130,7 @@ NLP research and implementation
       * It checks not only how many times a word appears in one document, but also checks the time it appears in the whole corpus. And it will penalize those common words which appeared in large number of documents, in this way, it is more likely to find real important words for a subset of documents
       * `TF = the number of time word t appears in 1 document`
       * `IDF = log(N/n)`, N is the number of documents, n is the number of documents that t appeared. In this way, when n is large, IDF tend to get closer to 0, and therefore those stop words will get low score (`TF * IDF`)
+      * Higher score, more important the word to the document
     * Co-Occurrence Matrix & Context Window
       * With context window, it defines the number of words together, and even a direction. For example, 2 words together
       * Co-occurance will be the count of word tuples, the number of words ina tuple is defined by context window. For example, count the co-occurance of (ice, cream)
