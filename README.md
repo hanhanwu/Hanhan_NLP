@@ -60,9 +60,18 @@ NLP research and implementation
   * Flair: https://www.analyticsvidhya.com/blog/2019/02/flair-nlp-library-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
     * pos tag
     * words embedding
-*********************************************************************************************
+    
+## Search Algorithms
+* [Besides BFS, DFS, there are other search algorithms][12]
+  * There's also a comparison table at the end
+  * Depth First Search
+  * Breadth-First Search
+  * Depth Limited Search
+  * Uniform Cost Search
+  * Iterative Deepening Depth First Search
+  * Bidirectional Search (if applicable)
 
-<b>PRACTICE</b>
+## PRACTICE
 
 * When dealing with special characters in text, ASCII and Binary Characteristics: http://roubaixinteractive.com/PlayGround/Binary_Conversion/The_Characters.asp
 
@@ -89,26 +98,18 @@ NLP research and implementation
  
 * Scikit_Learn NLP Go Through
   * Text Matching - Distance Matching, Phonetic Matching, Flexible String Matching, Cosine Similarity 
-  * In Distance Matching, besides Levenshtein Distance, there are other distance methods: [Jaro Distance][5], [Hammig Distance][6]
+  * In Distance Matching, besides Levenshtein Distance, there are other distance methods: [Jaro Distance][13], [Hammig Distance][14]
   * For Phonetic Matching, python Fuzzy contains Soundex, DMetaphone and nysiis. It seems that when it comes to similar pronuncation but different spelling, DMetaphone works better. But if you care about both spelling and pronouncation differences, Soundex and nysiis maybe better
   * Flexible String Matching, I will try regular expression, lemmatized matching (StanfordNLP), compact matching (python fuzzyfinder)
   * Cosine Similarity, when the text is represented as vector notation, a general cosine similarity can also be applied in order to measure vectorized similarity. <b>It seems that this method works very well when the words in 2 strings are not in the same order</b>, if we use Levenshtein Distance, it cares about words order and will output larger distance.
-  * <b>Coreference Resolution</b> is a process of finding relational links among the words (or phrases) within the sentences. it automatically figures out what does "he", "it" mean in the sentences. [Standford NLP Coreference Resolution][7], [Standford NLP Python][8] 
-  * [Reference][9]
-  * [my code][10]
+  * <b>Coreference Resolution</b> is a process of finding relational links among the words (or phrases) within the sentences. it automatically figures out what does "he", "it" mean in the sentences. [Standford NLP Coreference Resolution][15], [Standford NLP Python][16] 
+  * [Reference][17]
+  * [my code][18]
  
 * R Web Mining
   * Learning Resource: https://www.analyticsvidhya.com/blog/2017/03/beginners-guide-on-web-scraping-in-r-using-rvest-with-hands-on-knowledge/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
   * My R code: https://github.com/hanhanwu/Hanhan_NLP/blob/master/R_web_parsing.R
   * The way I parse the data is totally different from the methods used in learning resources. In the learning resource, they are using class name, and when there are multiple web elements with the same class names, their method may not be able to find the content in order. In my code, I have found that using `XPATH` is much better for this case, and with `Firebug`, you can simply right click to copy the `XPATH` of your web element, write a function to get the content in order
-
- 
-[5]:https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance
-[6]:https://en.wikipedia.org/wiki/Hamming_distance
-[7]:http://nlp.stanford.edu/software/dcoref.shtml
-[8]:https://github.com/Wordseer/stanford-corenlp-python
-[9]:https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
-[10]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP%20with%20Scikit%20Learn.ipynb
 
  
 *********************************************************************************************
@@ -530,3 +531,10 @@ NLP research and implementation
 [9]:http://www.nltk.org/howto/sentiment.html
 [10]:https://www.analyticsvidhya.com/blog/2019/06/understanding-transformers-nlp-state-of-the-art-models/?utm_source=blog&utm_medium=5-open-source-machine-learning-projects-data-scientist
 [11]:https://github.com/lucidrains/reformer-pytorch
+[12]:https://www.analyticsvidhya.com/blog/2021/02/uninformed-search-algorithms-in-ai/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+[13]:https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance
+[14]:https://en.wikipedia.org/wiki/Hamming_distance
+[15]:http://nlp.stanford.edu/software/dcoref.shtml
+[16]:https://github.com/Wordseer/stanford-corenlp-python
+[17]:https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+[18]:https://github.com/hanhanwu/Hanhan_NLP/blob/master/NLP%20with%20Scikit%20Learn.ipynb
