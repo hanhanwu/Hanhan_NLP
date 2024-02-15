@@ -63,9 +63,6 @@ DOWNLOAD_DELAY = 3
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'your_project_name.pipelines.SomePipeline': 300,
-# }
 ITEM_PIPELINES = {
    'ScrapeNews.my_pipelines.ScrapeNewsPipeline': 400,
 }
